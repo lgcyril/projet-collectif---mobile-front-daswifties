@@ -1,83 +1,83 @@
 [
     {
-        "name": "Turtle Rock",
-        "category": "Rivers",
-        "city": "Twentynine Palms",
-        "state": "California",
+        "name": "Villa Bela Kiss",
+        "category": "Maison hantée",
+        "city": "Oise",
+        "state": "Ile-de-France",
         "id": 1001,
         "isFeatured": true,
         "isFavorite": true,
-        "park": "Joshua Tree National Park",
+        "park": "Villa Bela Kiss",
         "coordinates": {
-            "longitude": -116.166868,
-            "latitude": 34.011286
+            "longitude": 2.0823355,
+            "latitude": 49.4300997
         },
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae. Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos egestas maecenas imperdiet eget id donec nisl curae congue, massa tortor vivamus ridiculus integer porta ultrices venenatis aliquet, curabitur et posuere blandit magnis dictum auctor lacinia, eleifend dolor in ornare vulputate ipsum morbi felis. Faucibus cursus malesuada orci ultrices diam nisl taciti torquent, tempor eros suspendisse euismod condimentum dis velit mi tristique, a quis etiam dignissim dictum porttitor lobortis ad fermentum, sapien consectetur dui dolor purus elit pharetra. Interdum mattis sapien ac orci vestibulum vulputate laoreet proin hac, maecenas mollis ridiculus morbi praesent cubilia vitae ligula vel, sem semper volutpat curae mauris justo nisl luctus, non eros primis ultrices nascetur erat varius integer.",
-        "imageName": "turtlerock"
+        "description": "Digne d’un épisode d‘American Horror Story, cette ancienne maison de campagne a tout d’une maison hantée ! Il se murmure qu’une jeune fille, Camille, serait morte à l’âge de 18 ans dans de terribles circonstances au sein de ce petit château de la Renaissance… Bonjour les frissons me direz-vous ! Mais outre l’histoire de cette maison, c’est son architecture figée dans le temps, ses papiers peints décrépis et ses meubles d’origine prenant la poussière qui attirent les photographes. Bien entendu, l’adresse de ce lieu restera secrète. Pour vous y rendre, à vous de trouver !",
+        "imageName": "villabelakiss"
     },
     {
-        "name": "Silver Salmon Creek",
-        "category": "Lakes",
-        "city": "Port Alsworth",
-        "state": "Alaska",
+        "name": "Hôpital Joe Jill",
+        "category": "Hôpitaux",
+        "city": "Paris",
+        "state": "Ile-de-France",
         "id": 1002,
         "isFeatured": false,
         "isFavorite": false,
-        "park": "Lake Clark National Park and Preserve",
+        "park": "Hôpital Joe Jill",
         "coordinates": {
-            "longitude": -152.665167,
-            "latitude": 59.980167
+            "longitude": 2.2958699602637145,
+            "latitude": 48.838244838151695
         },
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae. Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos egestas maecenas imperdiet eget id donec nisl curae congue, massa tortor vivamus ridiculus integer porta ultrices venenatis aliquet, curabitur et posuere blandit magnis dictum auctor lacinia, eleifend dolor in ornare vulputate ipsum morbi felis. Faucibus cursus malesuada orci ultrices diam nisl taciti torquent, tempor eros suspendisse euismod condimentum dis velit mi tristique, a quis etiam dignissim dictum porttitor lobortis ad fermentum, sapien consectetur dui dolor purus elit pharetra. Interdum mattis sapien ac orci vestibulum vulputate laoreet proin hac, maecenas mollis ridiculus morbi praesent cubilia vitae ligula vel, sem semper volutpat curae mauris justo nisl luctus, non eros primis ultrices nascetur erat varius integer.",
-        "imageName": "silversalmoncreek"
+        "description": "Vous ne pouvez pas le louper ! Le bâtiment en briques rouges est immense et sa structure imposante attire tout de suite les regards. D’après les explorateurs, pour y pénétrer, c’est une porte cachée au sous-sol qu’il faut chercher et qui vous mènera directement dans le hall d’entrée. A l’intérieur, on a l’impression que les patients et le personnel se sont enfuis avec précipitation. Paperasse, mobilier et jouets pour enfants sont encore là pour le plus grand bonheur des photographes qui ont de quoi meubler leurs mises en scène !",
+        "imageName": "hopitaljoejill"
     },
     {
-        "name": "Chilkoot Trail",
-        "category": "Mountains",
-        "city": "Skagway",
-        "state": "Alaska",
+        "name": "Hôpital Earle Nelson",
+        "category": "Hôpitaux",
+        "city": "Paris",
+        "state": "Ile-de-France",
         "id": 1003,
         "isFeatured": false,
         "isFavorite": true,
         "park": "Klondike Gold Rush National Historical Park",
         "coordinates": {
-            "longitude": -135.334571,
-            "latitude": 59.560551
+            "longitude": 2.331406,
+            "latitude": 48.8371047
         },
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae. Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos egestas maecenas imperdiet eget id donec nisl curae congue, massa tortor vivamus ridiculus integer porta ultrices venenatis aliquet, curabitur et posuere blandit magnis dictum auctor lacinia, eleifend dolor in ornare vulputate ipsum morbi felis. Faucibus cursus malesuada orci ultrices diam nisl taciti torquent, tempor eros suspendisse euismod condimentum dis velit mi tristique, a quis etiam dignissim dictum porttitor lobortis ad fermentum, sapien consectetur dui dolor purus elit pharetra. Interdum mattis sapien ac orci vestibulum vulputate laoreet proin hac, maecenas mollis ridiculus morbi praesent cubilia vitae ligula vel, sem semper volutpat curae mauris justo nisl luctus, non eros primis ultrices nascetur erat varius integer.",
-        "imageName": "chilkoottrail"
+        "description": "Cet immense hôpital abandonné se situe en plein cœur de Paris dans le 14e arrondissement ! Mais vous n’en saurez pas plus, le principe même de l’urbex – l’exploration urbaine – étant justement de garder les adresses secrètes. Contrairement à la plupart des spots abandonnés, quelques bâtiments de cet hôpital sont encore occupés, même si la plupart des pièces sont le nouveau terrain de jeu des graffeurs !",
+        "imageName": "hopitalearlenelson"
     },
     {
-        "name": "St. Mary Lake",
-        "category": "Lakes",
-        "city": "Browning",
-        "state": "Montana",
+        "name": "Le fort de Vaujours",
+        "category": "Dangereux",
+        "city": "Vaujours",
+        "state": "Ile-de-France",
         "id": 1004,
         "isFeatured": true,
         "isFavorite": true,
-        "park": "Glacier National Park",
+        "park": "Le fort de Vaujours",
         "coordinates": {
-            "longitude": -113.536248,
-            "latitude": 48.69423
+            "longitude": 2.5691921,
+            "latitude": 48.9302563
         },
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae. Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos egestas maecenas imperdiet eget id donec nisl curae congue, massa tortor vivamus ridiculus integer porta ultrices venenatis aliquet, curabitur et posuere blandit magnis dictum auctor lacinia, eleifend dolor in ornare vulputate ipsum morbi felis. Faucibus cursus malesuada orci ultrices diam nisl taciti torquent, tempor eros suspendisse euismod condimentum dis velit mi tristique, a quis etiam dignissim dictum porttitor lobortis ad fermentum, sapien consectetur dui dolor purus elit pharetra. Interdum mattis sapien ac orci vestibulum vulputate laoreet proin hac, maecenas mollis ridiculus morbi praesent cubilia vitae ligula vel, sem semper volutpat curae mauris justo nisl luctus, non eros primis ultrices nascetur erat varius integer.",
-        "imageName": "stmarylake"
+        "description": "Construit à la fin du 19ème pour défendre Paris contre l’invasion de l’Armée Prussienne, cet ancien fort de l’Est parisien, situé entre la Seine-et-Marne (77) et la Seine-Saint-Denis (93), est sûrement l’un des sites d’urbex les plus dangereux de la région. De fait, entre 1955 et 1997, il fut occupé par le Commissariat à l’énergie atomique (CEA) comme centre de recherches. C’est notamment ici que fut mis au point le détonateur de la première bombe atomique française. Hautement surveillé, ce site est aujourd’hui encore marquée par de l’uranium sur près de 50 hectares. C’est pourquoi, les clichés de cet endroit se font si rares : s’y aventurent seulement les explorateurs les mieux équipés. À l’intérieur, les traces d’explosion, encore largement visibles, font réellement froid dans le dos !",
+        "imageName": "fortvaujoursJ"
     },
     {
-        "name": "Twin Lake",
-        "category": "Lakes",
-        "city": "Twin Lakes",
-        "state": "Alaska",
+        "name": "La plage",
+        "category": "Complexe aquatique",
+        "city": "Médan",
+        "state": "Ile-de-France",
         "id": 1005,
         "isFeatured": false,
         "isFavorite": false,
-        "park": "Lake Clark National Park and Preserve",
+        "park": "La plage",
         "coordinates": {
-            "longitude": -153.849883,
-            "latitude": 60.641684
+            "longitude": 1.99503,
+            "latitude": 48.95275
         },
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae. Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos egestas maecenas imperdiet eget id donec nisl curae congue, massa tortor vivamus ridiculus integer porta ultrices venenatis aliquet, curabitur et posuere blandit magnis dictum auctor lacinia, eleifend dolor in ornare vulputate ipsum morbi felis. Faucibus cursus malesuada orci ultrices diam nisl taciti torquent, tempor eros suspendisse euismod condimentum dis velit mi tristique, a quis etiam dignissim dictum porttitor lobortis ad fermentum, sapien consectetur dui dolor purus elit pharetra. Interdum mattis sapien ac orci vestibulum vulputate laoreet proin hac, maecenas mollis ridiculus morbi praesent cubilia vitae ligula vel, sem semper volutpat curae mauris justo nisl luctus, non eros primis ultrices nascetur erat varius integer.",
-        "imageName": "twinlake"
+        "description": "Un complexe aquatique oublié sur une île près de Médan. Grands toboggans et piscines vides. La principale difficulté est d'y accéder car il faut traverser la Seine. Une fois qu'on y est arrivé, la promenade est très agréable.",
+        "imageName": "laplage"
     },
     {
         "name": "Lake McDonald",
