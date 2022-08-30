@@ -22,6 +22,10 @@
 		A9B87DA828BE178D006E78C7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B87DA728BE178D006E78C7 /* ViewModel.swift */; };
 		A9B87DAA28BE1887006E78C7 /* My_ImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B87DA928BE1887006E78C7 /* My_ImagesApp.swift */; };
 		A9B87DAC28BE1C42006E78C7 /* ImagesAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */; };
+		A9F711EB28BE3E3400A516BE /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711EA28BE3E3400A516BE /* Picker.swift */; };
+		A9F711EF28BE44DC00A516BE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711ED28BE44DC00A516BE /* ImagePicker.swift */; };
+		A9F711F028BE44DC00A516BE /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711EE28BE44DC00A516BE /* ZoomableScrollView.swift */; };
+		A9F711F228BE613A00A516BE /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711F128BE613A00A516BE /* MyImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		A9B87DA728BE178D006E78C7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A9B87DA928BE1887006E78C7 /* My_ImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_ImagesApp.swift; sourceTree = "<group>"; };
 		A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAdd.swift; sourceTree = "<group>"; };
+		A9F711EA28BE3E3400A516BE /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		A9F711ED28BE44DC00A516BE /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		A9F711EE28BE44DC00A516BE /* ZoomableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		A9F711F128BE613A00A516BE /* MyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 		A97357BC28BCEE6800ACDA48 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				A9F711EC28BE44DC00A516BE /* UIViewRepresentables */,
 				A9B87DA628BE173B006E78C7 /* ViewModels */,
 				A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */,
 				A9B855AB28BD089700BE729E /* Views */,
@@ -112,6 +121,8 @@
 			children = (
 				A9B855A728BD072300BE729E /* Landmark.swift */,
 				A9B855A928BD084300BE729E /* ModelData.swift */,
+				A9F711EA28BE3E3400A516BE /* Picker.swift */,
+				A9F711F128BE613A00A516BE /* MyImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +141,16 @@
 				A9B87DA728BE178D006E78C7 /* ViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A9F711EC28BE44DC00A516BE /* UIViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				A9F711ED28BE44DC00A516BE /* ImagePicker.swift */,
+				A9F711EE28BE44DC00A516BE /* ZoomableScrollView.swift */,
+			);
+			name = UIViewRepresentables;
+			path = "../../../Downloads/My Images 1  - Completed/My Images/UIViewRepresentables";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,14 +225,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9B87DA828BE178D006E78C7 /* ViewModel.swift in Sources */,
+				A9F711F228BE613A00A516BE /* MyImage.swift in Sources */,
 				A9B87DAC28BE1C42006E78C7 /* ImagesAdd.swift in Sources */,
 				A97357C028BCEE6800ACDA48 /* ContentView.swift in Sources */,
+				A9F711EF28BE44DC00A516BE /* ImagePicker.swift in Sources */,
 				A9B855A428BD035E00BE729E /* MapView.swift in Sources */,
 				A97357BE28BCEE6800ACDA48 /* LandmarksApp.swift in Sources */,
 				A9B855B128BD0ACE00BE729E /* LandmarkList.swift in Sources */,
 				A9B855B328BD0C8900BE729E /* LandmarkDetail.swift in Sources */,
 				A9B855A228BD02F700BE729E /* CircleImage.swift in Sources */,
 				A9B87DAA28BE1887006E78C7 /* My_ImagesApp.swift in Sources */,
+				A9F711F028BE44DC00A516BE /* ZoomableScrollView.swift in Sources */,
+				A9F711EB28BE3E3400A516BE /* Picker.swift in Sources */,
 				A9B855A828BD072300BE729E /* Landmark.swift in Sources */,
 				A9B855AF28BD090D00BE729E /* LandmarkRow.swift in Sources */,
 				A9B855AA28BD084300BE729E /* ModelData.swift in Sources */,
@@ -345,6 +370,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -373,6 +399,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -18,11 +18,12 @@ struct ImagesAdd: View {
         NavigationView {
             VStack {
                 if let image = vm.image {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                    
+                    ZoomableScrollView {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                    }
                 } else {
                     Image(systemName: "photo.fill")
                         .resizable()
@@ -32,18 +33,38 @@ struct ImagesAdd: View {
                         .padding(.horizontal)
                     
                 }
+                HStack {
+                    Button {
+                        vm.source = .camera
+                        vm.showPhotoPicker ()
+                    } label: {
+                        Text("Camera -∞-°")
+                    }
+                    Button {
+                        vm.source = .library
+                        vm.showPhotoPicker ()
+                    } label: {
+                        Text("  Ph@tos ∞")
+                        
+                    }
+                    
+                }
                 Spacer ()
                 
                 Form {
                     TextField("Title : ",
-                                          text: $title)
-                                TextField("Description : ",
-                                          text: $description)
+                              text: $title)
+                    TextField("Description : ",
+                              text: $description)
                 }.navigationBarTitle(Text(" @dd a new spt : ∞"))
                 
             }
+            .sheet(isPresented: $vm.showPicker) {
+                ImagePicker(sourceType: vm.source == .library ? .photoLibrary : .camera, selectedImage: $vm.image)
+                    .ignoresSafeArea()
+            }
             
-        
+            
         }
     }
 }

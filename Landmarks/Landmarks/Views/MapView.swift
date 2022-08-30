@@ -28,8 +28,9 @@ struct MapView: View {
         )
     }
 }
-    struct MapView_Previews: PreviewProvider {
-        static var previews: some View {
-            MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
-        }
+
+struct MapView_Previews: PreviewProvider {
+    static var previews: some View {
+        MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
     }
+}
