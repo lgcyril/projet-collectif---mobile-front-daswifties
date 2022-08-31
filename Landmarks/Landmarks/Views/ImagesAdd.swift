@@ -40,13 +40,13 @@ struct ImagesAdd: View {
                         vm.source = .camera
                         vm.showPhotoPicker ()
                     } label: {
-                        Text("Camera -∞-°")
+                        ButtonLabel(symbolName: "camera", label: "Camera  -∞-°")
                     }
                     Button {
                         vm.source = .library
                         vm.showPhotoPicker ()
                     } label: {
-                        Text("  Ph@tos ∞")
+                        ButtonLabel(symbolName: "photo", label: "Ph@tos ∞")
                         
                     }
                     
