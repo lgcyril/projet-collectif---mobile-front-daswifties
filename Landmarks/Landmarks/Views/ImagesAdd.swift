@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ImagesAdd: View {
-    @State private var title = ""
+    @State private var name = ""
+    @State private var category = ""
+    @State private var city = ""
     @State private var description = ""
     @State private var place = ""
     @State private var photo = ""
@@ -52,8 +54,12 @@ struct ImagesAdd: View {
                 Spacer ()
                 
                 Form {
-                    TextField("Title : ",
-                              text: $title)
+                    TextField("Name : ",
+                              text: $name)
+                    TextField("Category : ",
+                              text: $category)
+                    TextField("City : ",
+                              text: $city)
                     TextField("Description : ",
                               text: $description)
                 }.navigationBarTitle(Text(" @dd a new spt : ∞"))
