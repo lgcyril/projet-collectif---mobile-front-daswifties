@@ -20,6 +20,8 @@ struct ContentView: View {
         }
         
         LandmarkList()
+        //ImagesAdd()
+      
     }
     
     func placeOrder(){}
