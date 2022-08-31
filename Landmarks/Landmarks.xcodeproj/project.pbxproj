@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A69879BE28BE3C2800751852 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69879BD28BE3C2800751852 /* Launch Screen.storyboard */; };
 		A97357BE28BCEE6800ACDA48 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */; };
 		A97357C028BCEE6800ACDA48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BF28BCEE6800ACDA48 /* ContentView.swift */; };
 		A97357C228BCEE7200ACDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97357C128BCEE7200ACDA48 /* Assets.xcassets */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A69879BD28BE3C2800751852 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A69879BF28BE400000751852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A97357BA28BCEE6800ACDA48 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		A97357BF28BCEE6800ACDA48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A9F711EC28BE44DC00A516BE /* UIViewRepresentables */,
+				A69879BF28BE400000751852 /* Info.plist */,
 				A9B87DA628BE173B006E78C7 /* ViewModels */,
 				A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */,
 				A9B855AB28BD089700BE729E /* Views */,
@@ -112,6 +116,7 @@
 				A9B855AE28BD090D00BE729E /* LandmarkRow.swift */,
 				A9B855B028BD0ACE00BE729E /* LandmarkList.swift */,
 				A9B855B228BD0C8900BE729E /* LandmarkDetail.swift */,
+				A69879BD28BE3C2800751852 /* Launch Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			files = (
 				A97357C528BCEE7200ACDA48 /* Preview Assets.xcassets in Resources */,
 				A97357C228BCEE7200ACDA48 /* Assets.xcassets in Resources */,
+				A69879BE28BE3C2800751852 /* Launch Screen.storyboard in Resources */,
 				A9B855A628BD06DD00BE729E /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,9 +377,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
+				INFOPLIST_FILE = Landmarks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -400,9 +407,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
+				INFOPLIST_FILE = Landmarks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
