@@ -9,14 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     
-   
+    
     
     var body: some View {
+        
+        
+        Menu("+") {
+            Button("Liste", action: placeOrder)
+            Button("Annuler", action: cancelOrder)
+        }
+        
         LandmarkList()
-       
     }
+    
+    func placeOrder(){}
+    func cancelOrder(){}
+    
+    
+    
 }
 
+       
+        
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
