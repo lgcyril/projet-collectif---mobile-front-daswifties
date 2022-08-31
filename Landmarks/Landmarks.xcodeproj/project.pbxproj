@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A69879BE28BE3C2800751852 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69879BD28BE3C2800751852 /* Launch Screen.storyboard */; };
+		A943F93428BFA70900B04331 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93328BFA70900B04331 /* FileManager+Extension.swift */; };
+		A943F93628BFA9AD00B04331 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93528BFA9AD00B04331 /* ButtonLabel.swift */; };
 		A97357BE28BCEE6800ACDA48 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */; };
 		A97357C028BCEE6800ACDA48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BF28BCEE6800ACDA48 /* ContentView.swift */; };
 		A97357C228BCEE7200ACDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97357C128BCEE7200ACDA48 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		A69879BD28BE3C2800751852 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A69879BF28BE400000751852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A943F93328BFA70900B04331 /* FileManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		A943F93528BFA9AD00B04331 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		A97357BA28BCEE6800ACDA48 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		A97357BF28BCEE6800ACDA48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A943F93228BFA70900B04331 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A943F93328BFA70900B04331 /* FileManager+Extension.swift */,
+			);
+			name = Extensions;
+			path = "../../../Downloads/My Images 2 - Completed/My Images/Extensions";
+			sourceTree = "<group>";
+		};
 		A97357B128BCEE6800ACDA48 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +97,7 @@
 		A97357BC28BCEE6800ACDA48 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				A943F93228BFA70900B04331 /* Extensions */,
 				A9F711EC28BE44DC00A516BE /* UIViewRepresentables */,
 				A69879BF28BE400000751852 /* Info.plist */,
 				A9B87DA628BE173B006E78C7 /* ViewModels */,
@@ -117,6 +131,7 @@
 				A9B855B028BD0ACE00BE729E /* LandmarkList.swift */,
 				A9B855B228BD0C8900BE729E /* LandmarkDetail.swift */,
 				A69879BD28BE3C2800751852 /* Launch Screen.storyboard */,
+				A943F93528BFA9AD00B04331 /* ButtonLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A943F93628BFA9AD00B04331 /* ButtonLabel.swift in Sources */,
 				A9B87DA828BE178D006E78C7 /* ViewModel.swift in Sources */,
 				A9F711F228BE613A00A516BE /* MyImage.swift in Sources */,
 				A9B87DAC28BE1C42006E78C7 /* ImagesAdd.swift in Sources */,
@@ -241,6 +257,7 @@
 				A9B855B328BD0C8900BE729E /* LandmarkDetail.swift in Sources */,
 				A9B855A228BD02F700BE729E /* CircleImage.swift in Sources */,
 				A9B87DAA28BE1887006E78C7 /* My_ImagesApp.swift in Sources */,
+				A943F93428BFA70900B04331 /* FileManager+Extension.swift in Sources */,
 				A9F711F028BE44DC00A516BE /* ZoomableScrollView.swift in Sources */,
 				A9F711EB28BE3E3400A516BE /* Picker.swift in Sources */,
 				A9B855A828BD072300BE729E /* Landmark.swift in Sources */,
@@ -376,8 +393,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
 				INFOPLIST_FILE = Landmarks/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
@@ -406,8 +423,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
 				INFOPLIST_FILE = Landmarks/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Would like to use the camera to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
