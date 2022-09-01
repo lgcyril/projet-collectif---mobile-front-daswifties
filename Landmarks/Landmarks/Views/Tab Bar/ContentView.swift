@@ -22,7 +22,8 @@ struct ContentView: View {
                         Image(systemName: "list.star")
                         Text("Liste")
                     }
-                Text("AddSpotView")
+                ImagesAdd()
+                    .environmentObject(ViewModel())
                     .tabItem{
                         Image(systemName: "camera")
                         Text("Add Spot")
