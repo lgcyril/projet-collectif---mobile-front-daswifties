@@ -15,47 +15,27 @@ struct ImagesAdd: View {
     @State private var place = ""
     @State private var photo = ""
     @EnvironmentObject var vm: ViewModel
+    @FocusState var nameField: Bool
     
     var body: some View {
         NavigationView {
             VStack {
-                if let image = vm.image {
-                    ZoomableScrollView {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                    }
-                } else {
-                    Image(systemName: "photo.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .opacity(0.6)
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding(.horizontal)
-                    
+                
+                if !vm.isEditing {
+                    imageScroll
                 }
+               selectedImage
+                
                 VStack {
-                    TextField("Image Name", text: $vm.imageName)
-                        .textFieldStyle(.roundedBorder)
-                    
-                HStack {
-                    Button {
-                        vm.source = .camera
-                        vm.showPhotoPicker ()
-                    } label: {
-                        ButtonLabel(symbolName: "camera", label: "Camera")
+                    if vm.image != nil {
+                        editGroup
                     }
-                    Button {
-                        vm.source = .library
-                        vm.showPhotoPicker ()
-                    } label: {
-                        ButtonLabel(symbolName: "photo", label: "Ph@tos ∞")
-                        
+                    if !vm.isEditing {
+                        pickerButtons
                     }
                     
                 }
-                }
+                .padding()
                 Spacer ()
                 
                 Form {
@@ -67,14 +47,20 @@ struct ImagesAdd: View {
                               text: $city)
                     TextField("Description : ",
                               text: $description)
-                }.navigationBarTitle(Text(" @dd a new spt : ∞"))
+                }.navigationBarTitle(Text(" @dd UrbexSpt : ∞"))
+                
+            }
+            .task {
+                if FileManager().docExist(named: fileName) {
+                    vm.loadMyImagesJSONFile()
+                }
                 
             }
             .sheet(isPresented: $vm.showPicker) {
                 ImagePicker(sourceType: vm.source == .library ? .photoLibrary : .camera, selectedImage: $vm.image)
                     .ignoresSafeArea()
             }
-            .alert("Error", isPresented: $vm.showCameraAlert, presenting: vm.cameraError, actions: {
+            .alert("Error", isPresented: $vm.showFileAlert, presenting: vm.appError, actions: {
                 cameraError in
                 cameraError.button
                 
@@ -82,7 +68,25 @@ struct ImagesAdd: View {
                 Text (cameraError.message)
             })
             .navigationTitle("My Images")
-            
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    HStack {
+                        Spacer ()
+                        Button {
+                            nameField = false
+                            
+                        } label : {
+                            Image(systemName: "keyboard.chvron.compact.down")
+                            
+                            
+                        }
+                        
+                        
+                    }
+                    
+                }
+                
+            }
         }
     }
 }
@@ -93,3 +97,4 @@ struct ImagesAdd_Previews: PreviewProvider {
             .environmentObject(ViewModel())
     }
 }
+

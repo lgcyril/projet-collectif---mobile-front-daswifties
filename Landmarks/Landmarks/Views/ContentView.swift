@@ -17,7 +17,8 @@ struct ContentView: View {
         //ImagesAdd()
         
         TabView{
-            LandmarkList()
+            ImagesAdd()
+//            LandmarkList()
                 .tabItem{
                     Image(systemName: "list.star")
                     Text("Liste")

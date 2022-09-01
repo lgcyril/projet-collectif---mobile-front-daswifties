@@ -13,6 +13,7 @@
 		A943F93D28C09EFD00B04331 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93B28C09EFD00B04331 /* ImagePicker.swift */; };
 		A943F93E28C09EFD00B04331 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93C28C09EFD00B04331 /* ZoomableScrollView.swift */; };
 		A943F94028C0A1A400B04331 /* MyImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93F28C0A1A400B04331 /* MyImageError.swift */; };
+		A943F94228C0F2BA00B04331 /* ContentView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F94128C0F2BA00B04331 /* ContentView+Extension.swift */; };
 		A97357BE28BCEE6800ACDA48 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */; };
 		A97357C028BCEE6800ACDA48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BF28BCEE6800ACDA48 /* ContentView.swift */; };
 		A97357C228BCEE7200ACDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97357C128BCEE7200ACDA48 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		A943F93B28C09EFD00B04331 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A943F93C28C09EFD00B04331 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		A943F93F28C0A1A400B04331 /* MyImageError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImageError.swift; sourceTree = "<group>"; };
+		A943F94128C0F2BA00B04331 /* ContentView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Extension.swift"; sourceTree = "<group>"; };
 		A97357BA28BCEE6800ACDA48 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		A97357BF28BCEE6800ACDA48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				A9B855B228BD0C8900BE729E /* LandmarkDetail.swift */,
 				A69879BD28BE3C2800751852 /* Launch Screen.storyboard */,
 				A943F93528BFA9AD00B04331 /* ButtonLabel.swift */,
+				A943F94128C0F2BA00B04331 /* ContentView+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				A9B87DA828BE178D006E78C7 /* ViewModel.swift in Sources */,
 				A9F711F228BE613A00A516BE /* MyImage.swift in Sources */,
 				A943F93D28C09EFD00B04331 /* ImagePicker.swift in Sources */,
+				A943F94228C0F2BA00B04331 /* ContentView+Extension.swift in Sources */,
 				A943F93E28C09EFD00B04331 /* ZoomableScrollView.swift in Sources */,
 				A9B87DAC28BE1C42006E78C7 /* ImagesAdd.swift in Sources */,
 				A97357C028BCEE6800ACDA48 /* ContentView.swift in Sources */,
