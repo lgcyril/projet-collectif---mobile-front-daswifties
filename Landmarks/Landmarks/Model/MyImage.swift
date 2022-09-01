@@ -16,7 +16,7 @@ struct MyImage: Identifiable, Codable {
             return try FileManager().readImage(with: id)
             
         } catch {
-            return UIImage(systemName: "photo.fill")
+            return UIImage(systemName: "photo.fill")!
             
             
         }
