@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+//import MapKit
 
 struct ContentView: View {
     
-    
-    
+    //var coordinate: CLLocationCoordinate2D
+  
     var body: some View {
         
         
@@ -18,7 +19,7 @@ struct ContentView: View {
             Button("Liste", action: placeOrder)
             Button("Annuler", action: cancelOrder)
         }
-        
+        //MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
         LandmarkList()
         //ImagesAdd()
       
@@ -36,6 +37,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        //MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
     }
 }
 
