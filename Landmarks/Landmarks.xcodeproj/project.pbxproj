@@ -12,6 +12,7 @@
 		A943F93928C09EC600B04331 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93828C09EC600B04331 /* FileManager+Extension.swift */; };
 		A943F93D28C09EFD00B04331 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93B28C09EFD00B04331 /* ImagePicker.swift */; };
 		A943F93E28C09EFD00B04331 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93C28C09EFD00B04331 /* ZoomableScrollView.swift */; };
+		A943F94028C0A1A400B04331 /* MyImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93F28C0A1A400B04331 /* MyImageError.swift */; };
 		A97357BE28BCEE6800ACDA48 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */; };
 		A97357C028BCEE6800ACDA48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97357BF28BCEE6800ACDA48 /* ContentView.swift */; };
 		A97357C228BCEE7200ACDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97357C128BCEE7200ACDA48 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		A943F93828C09EC600B04331 /* FileManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		A943F93B28C09EFD00B04331 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A943F93C28C09EFD00B04331 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		A943F93F28C0A1A400B04331 /* MyImageError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyImageError.swift; sourceTree = "<group>"; };
 		A97357BA28BCEE6800ACDA48 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97357BD28BCEE6800ACDA48 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		A97357BF28BCEE6800ACDA48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		A9B855AC28BD08AC00BE729E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A943F93F28C0A1A400B04331 /* MyImageError.swift */,
 				A9B855A728BD072300BE729E /* Landmark.swift */,
 				A9B855A928BD084300BE729E /* ModelData.swift */,
 				A9F711EA28BE3E3400A516BE /* Picker.swift */,
@@ -253,6 +256,7 @@
 				A9B855A428BD035E00BE729E /* MapView.swift in Sources */,
 				A97357BE28BCEE6800ACDA48 /* LandmarksApp.swift in Sources */,
 				A9B855B128BD0ACE00BE729E /* LandmarkList.swift in Sources */,
+				A943F94028C0A1A400B04331 /* MyImageError.swift in Sources */,
 				A9B855B328BD0C8900BE729E /* LandmarkDetail.swift in Sources */,
 				A9B855A228BD02F700BE729E /* CircleImage.swift in Sources */,
 				A9B87DAA28BE1887006E78C7 /* My_ImagesApp.swift in Sources */,

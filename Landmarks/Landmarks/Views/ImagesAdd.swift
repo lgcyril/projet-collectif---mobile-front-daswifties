@@ -35,12 +35,16 @@ struct ImagesAdd: View {
                         .padding(.horizontal)
                     
                 }
+                VStack {
+                    TextField("Image Name", text: $vm.imageName)
+                        .textFieldStyle(.roundedBorder)
+                    
                 HStack {
                     Button {
                         vm.source = .camera
                         vm.showPhotoPicker ()
                     } label: {
-                        ButtonLabel(symbolName: "camera", label: "Camera  -∞-°")
+                        ButtonLabel(symbolName: "camera", label: "Camera")
                     }
                     Button {
                         vm.source = .library
@@ -50,6 +54,7 @@ struct ImagesAdd: View {
                         
                     }
                     
+                }
                 }
                 Spacer ()
                 
@@ -69,7 +74,14 @@ struct ImagesAdd: View {
                 ImagePicker(sourceType: vm.source == .library ? .photoLibrary : .camera, selectedImage: $vm.image)
                     .ignoresSafeArea()
             }
-            
+            .alert("Error", isPresented: $vm.showCameraAlert, presenting: vm.cameraError, actions: {
+                cameraError in
+                cameraError.button
+                
+            }, message: { cameraError in
+                Text (cameraError.message)
+            })
+            .navigationTitle("My Images")
             
         }
     }
