@@ -13,26 +13,26 @@ struct ContentView: View {
     
     var body: some View {
         
+        //ImagesAdd()
         
-        Menu("+") {
-            Button("Liste", action: placeOrder)
-            Button("Annuler", action: cancelOrder)
+        TabView{
+            LandmarkList()
+                .tabItem{
+                    Image(systemName: "list.star")
+                    Text("Liste")
+                }
+            Text("AddSpotView")
+                .tabItem{
+                    Image(systemName: "camera")
+                    Text("Add Spot")
+                }
         }
         
-        LandmarkList()
-        //ImagesAdd()
-      
     }
-    
-    func placeOrder(){}
-    func cancelOrder(){}
-    
-    
-    
 }
 
-       
-        
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
