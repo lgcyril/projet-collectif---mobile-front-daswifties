@@ -14,26 +14,25 @@ struct ContentView: View {
   
     var body: some View {
         
-        
-        Menu("+") {
-            Button("Liste", action: placeOrder)
-            Button("Annuler", action: cancelOrder)
-        }
-        //MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
-        LandmarkList()
         //ImagesAdd()
-      
+        
+        TabView{
+            LandmarkList()
+                .tabItem{
+                    Image(systemName: "list.star")
+                    Text("Liste")
+                }
+            Text("AddSpotView")
+                .tabItem{
+                    Image(systemName: "camera")
+                    Text("Add Spot")
+                }
+        }
     }
-    
-    func placeOrder(){}
-    func cancelOrder(){}
-    
-    
-    
 }
 
-       
-        
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
