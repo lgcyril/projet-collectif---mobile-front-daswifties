@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A636AC4228C2478900D7BC56 /* UrbexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A636AC4128C2478900D7BC56 /* UrbexApi.swift */; };
 		A69879BE28BE3C2800751852 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69879BD28BE3C2800751852 /* Launch Screen.storyboard */; };
 		A69879FB28C0BA8400751852 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69879FA28C0BA8400751852 /* SettingsView.swift */; };
+		A6CA60D828C1ED73009850FC /* LawVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CA60D728C1ED73009850FC /* LawVIew.swift */; };
 		A943F93628BFA9AD00B04331 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93528BFA9AD00B04331 /* ButtonLabel.swift */; };
 		A943F93928C09EC600B04331 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93828C09EC600B04331 /* FileManager+Extension.swift */; };
 		A943F93D28C09EFD00B04331 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93B28C09EFD00B04331 /* ImagePicker.swift */; };
@@ -35,9 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A636AC4128C2478900D7BC56 /* UrbexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbexApi.swift; sourceTree = "<group>"; };
 		A69879BD28BE3C2800751852 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A69879BF28BE400000751852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A69879FA28C0BA8400751852 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Landmark/SettingsView.swift; sourceTree = "<group>"; };
+		A6CA60D728C1ED73009850FC /* LawVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawVIew.swift; sourceTree = "<group>"; };
 		A943F93528BFA9AD00B04331 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		A943F93828C09EC600B04331 /* FileManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		A943F93B28C09EFD00B04331 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			children = (
 				A97357BF28BCEE6800ACDA48 /* ContentView.swift */,
 				A69879FA28C0BA8400751852 /* SettingsView.swift */,
+				A6CA60D728C1ED73009850FC /* LawVIew.swift */,
 				A69879F928C0BA4100751852 /* Landmark */,
 				A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */,
 			);
@@ -184,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B855A528BD06DD00BE729E /* landmarkData.json */,
+				A636AC4128C2478900D7BC56 /* UrbexApi.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 				A943F93628BFA9AD00B04331 /* ButtonLabel.swift in Sources */,
 				A9B87DA828BE178D006E78C7 /* ViewModel.swift in Sources */,
 				A9F711F228BE613A00A516BE /* MyImage.swift in Sources */,
+				A636AC4228C2478900D7BC56 /* UrbexApi.swift in Sources */,
+				A6CA60D828C1ED73009850FC /* LawVIew.swift in Sources */,
 				A943F93D28C09EFD00B04331 /* ImagePicker.swift in Sources */,
 				A943F94228C0F2BA00B04331 /* ContentView+Extension.swift in Sources */,
 				A943F93E28C09EFD00B04331 /* ZoomableScrollView.swift in Sources */,
@@ -414,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
@@ -432,8 +441,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.sandy.landmarks;
+				PRODUCT_BUNDLE_IDENTIFIER = sandy.cs.Landmarks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
@@ -463,8 +474,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.sandy.landmarks;
+				PRODUCT_BUNDLE_IDENTIFIER = sandy.cs.Landmarks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

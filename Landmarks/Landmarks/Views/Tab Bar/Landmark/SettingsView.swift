@@ -10,8 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         List{
-            Section(header: Text("Lois et Règles")){
-            
+            Section(header: Text("Loi et Règles")){
+            LawVIew()
             }
         }
     }
