@@ -1,9 +1,12 @@
+//import Foundation
+//import SwiftUI
 //
-//  UrbexApi.swift
-//  Landmarks
+//struct RecordList: Decodable {
+//    let records : [Record]
+//}
 //
-//  Created by Sandy CARDOSO SIBORRO on 02/09/2022.
 //
+
 import Foundation
 import SwiftUI
 
@@ -119,3 +122,18 @@ struct UrbexApi_Previews: PreviewProvider {
         UrbexApi()
     }
 }
+
+//// func loadData(start : Int, limit : Int, completion:@escaping ([ImageModel]) -> ()) {
+////        http://jsonplaceholder.typicode.com/photos?_start=0&_limit=5
+////    guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos?_start=\(start)&_limit=\(limit)") else {
+////        print("Invalid url...")
+////        return
+////     }
+////     URLSession.shared.dataTask(with: url) { data, response, error in
+////        let images = try? JSONDecoder().decode([ImageModel].self, from: data!)
+////         print(images ?? [])
+////        DispatchQueue.main.async {
+////            completion(images ?? [])
+////        }
+////    }.resume()
+
