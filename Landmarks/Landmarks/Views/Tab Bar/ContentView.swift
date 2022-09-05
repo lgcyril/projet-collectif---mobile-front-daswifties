@@ -22,6 +22,19 @@ struct ContentView: View {
                         Image(systemName: "list.star")
                         Text("Liste")
                     }
+                
+                UrbexApi()
+                    .tabItem{
+                        Image(systemName: "network")
+                        Text("API")
+                    }
+                
+                Text("Carte")
+                    .tabItem{
+                        Image(systemName: "map")
+                        Text("Carte")
+                    }
+                
                 ImagesAdd()
                     .environmentObject(ViewModel())
                     .tabItem{
@@ -34,8 +47,6 @@ struct ContentView: View {
                         Image(systemName: "gear")
                         Text("Réglages")
                     }
-                
-                
             }
             
         } else {
