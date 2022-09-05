@@ -29,7 +29,6 @@ struct ContentView: View {
                         Text("API")
                     }
                 
-                Text("Carte")
                 DisplayMap()
                     .tabItem{
                         Image(systemName: "map")

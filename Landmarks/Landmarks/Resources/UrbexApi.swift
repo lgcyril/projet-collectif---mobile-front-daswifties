@@ -38,10 +38,10 @@ struct UrbexApi: View {
         var body: some View {
             let message = Text("Test API")
             
-            VStack {
-                Image(systemName: "network")
-                Text("Test API")
-            }
+//            VStack {
+//                Image(systemName: "network")
+//                Text("Test API")
+//            }
             //print(records)
 //            NavigationView {
 //                List(records) { record in
