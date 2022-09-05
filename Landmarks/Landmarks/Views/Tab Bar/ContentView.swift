@@ -23,13 +23,15 @@ struct ContentView: View {
                         Text("Liste")
                     }
                 
-                UrbexApi()
-                    .tabItem{
-                        Image(systemName: "network")
-                        Text("API")
-                    }
+                //                UrbexApi()
+                //                    .tabItem{
+                //                        Image(systemName: "network")
+                //                        Text("API")
+                //                    }
+                
                 
                 Text("Carte")
+                DisplayMap()
                     .tabItem{
                         Image(systemName: "map")
                         Text("Carte")
@@ -78,26 +80,26 @@ struct ContentView: View {
                         Text("Refuser")
                             .alert("Nous ne pouvons pas vous donner accès à notre application", isPresented: $showAlert) {
                                 Button("OK", role: .cancel) { }
-                                    }
-                   
+                            }
+                        
+                        
+                    }
                     
                 }
-                
             }
+            
+            //ImagesAdd()
+            
         }
-        
-        //ImagesAdd()
-        
     }
-}
-
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-        //MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
+    
+    
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+            //MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
+        }
     }
-}
-
+    
 }

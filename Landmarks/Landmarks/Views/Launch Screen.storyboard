@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="belakissscreen" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-dX-dE7">
-                                <rect key="frame" x="111" y="352" width="192" height="192"/>
+                                <rect key="frame" x="110.5" y="351.5" width="193" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gcd-dX-dE7" secondAttribute="height" multiplier="1:1" id="U6o-YM-0jE"/>
                                 </constraints>
