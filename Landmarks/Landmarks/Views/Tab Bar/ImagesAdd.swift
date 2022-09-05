@@ -47,7 +47,7 @@ struct ImagesAdd: View {
                               text: $city)
                     TextField("Description : ",
                               text: $description)
-                }.navigationBarTitle(Text(" @dd UrbexSpt : ∞"))
+                }.navigationBarTitle(Text(" @dd UrbexSpt"))
                 
             }
             .task {
