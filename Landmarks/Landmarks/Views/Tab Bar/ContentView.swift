@@ -39,7 +39,7 @@ struct ContentView: View {
                     .environmentObject(ViewModel())
                     .tabItem{
                         Image(systemName: "camera")
-                        Text("Add Spot")
+                        Text("Add Spt")
                     }
                 
                 SettingsView()

@@ -18,7 +18,7 @@ struct LandmarkList: View {
                     LandmarkRow(landmark: landmark)
                 }
             }
-            .navigationTitle("Landmarks")
+            .navigationTitle("Urb€X $pts")
         }
         
         //ImagesAdd()
