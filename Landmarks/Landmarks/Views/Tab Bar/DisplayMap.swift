@@ -7,8 +7,8 @@ struct DisplayMap: View {
     
     var body: some View {
         Map(coordinateRegion: $region)
-            .frame(width: 400, height: 300)
-    }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)    }
 }
 
 struct DisplayMap_Previews: PreviewProvider {
