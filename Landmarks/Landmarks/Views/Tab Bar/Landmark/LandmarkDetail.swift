@@ -25,16 +25,15 @@ struct LandmarkDetail: View {
                     .font(.title)
                 
                 HStack {
-                    Text(landmark.park)
-                    Spacer()
-                    Text(landmark.state)
+                
+                    Text(landmark.city)
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 
                 Divider()
                 
-                Text("About \(landmark.name)")
+                Text("Description :")
                     .font(.title2)
                 Text(landmark.description)
             }
