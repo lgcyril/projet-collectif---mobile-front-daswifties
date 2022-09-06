@@ -14,14 +14,14 @@ struct RecordList: Decodable {
     let records : [Record]
 }
 
-struct Record: Decodable, Identifiable {
+struct Record: Decodable, Identifiable {  // Identifiable means that each item has a unique ID. Decodable means that it can be decoded - for example, we can transform a JSON object into this data model.
     let id: String
-    let fields: RecordField
+    let fields: RecordField?
 }
 
 struct RecordField: Decodable {
-    let name: String
-    let city: String
+    let name: String?
+    let city: String?
 }
 
 struct Post:Codable{
@@ -33,7 +33,7 @@ struct Post:Codable{
 }
 
 struct UrbexApi: View {
-//    @State private var records = [Record]()
+    @State private var records = [Record]()
 
         var body: some View {
             let message = Text("Test API")
@@ -42,7 +42,17 @@ struct UrbexApi: View {
 //                Image(systemName: "network")
 //                Text("Test API")
 //            }
-            //print(records)
+            print(records)
+            
+//            let billTotal = Double(textField.text!) ?? 0.0
+//            or providing a more advanced error handling
+//
+//            if let billTotal = Double(textField.text!) {
+//                // do something with billTotal
+//            } else {
+//                // handle the error
+//            }
+            
 //            NavigationView {
 //                List(records) { record in
 //                    VStack(alignment: .leading) {
@@ -55,7 +65,7 @@ struct UrbexApi: View {
 //            }
 //            .task {
 //      do {
-//                    let url = URL(string: "https://api.airtable.com/v0/app88l0ueoC01CHj3/Sheet1?api_key=keyHlG3CSo3y465xM")!
+//                    let url = URL(string: "https://api.airtable.com/v0/appOd9LKetjbpK9ry/Sheet1?api_key=key6CI84ofIkYQ4Ha")!
 //                    let (data, _) = try await URLSession.shared.data(from: url)
 //                    records = try JSONDecoder().decode(RecordList.self, from: data)
 //            print(records.id)
@@ -63,31 +73,34 @@ struct UrbexApi: View {
 //                    records = []
 //
 //
-//                }
+//                }  // fin navigatiobiew
 //            }
             
             
             func callAPI(){
-                guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1") else{
+                // test : https://jsonplaceholder.typicode.com/posts/1
+                guard let url = URL(string: "https://api.airtable.com/v0/appOd9LKetjbpK9ry/Sheet1?api_key=key6CI84ofIkYQ4Ha") else{
                     return
                 }
 
 
                 let task = URLSession.shared.dataTask(with: url){
                     data, response, error in
-                    
-                    if let data = data, let string = String(data: data, encoding: .utf8){
-                        print(string)
+                 
+                   if let data = data, let string = String(data: data, encoding: .utf8){
+             
+                        print("CALL",string)
                     }
                 }
 
                 task.resume()
             }
 
-            callAPI()
+           // callAPI()
 
             func decodeAPI(){
-                guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else{return}
+//                guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else{return}
+                guard let url = URL(string: "https://api.airtable.com/v0/appOd9LKetjbpK9ry/Sheet1?api_key=key6CI84ofIkYQ4Ha") else{return}
 
                 let task = URLSession.shared.dataTask(with: url){
                     data, response, error in
@@ -96,9 +109,9 @@ struct UrbexApi: View {
 
                     if let data = data{
                         do{
-                            let tasks = try decoder.decode([Post].self, from: data)
-                            tasks.forEach{ i in
-                                print(i.title)
+                            let tasks = try decoder.decode(RecordList.self, from: data)
+                            tasks.records.forEach{ i in
+                                print(i.fields?.name)
                             }
                         }catch{
                             print(error)
@@ -109,10 +122,10 @@ struct UrbexApi: View {
 
             }
 
-            decodeAPI()
+           decodeAPI()
 
-            return message
-            
+           return message
+
             
         }  // fin body
     }  // fin UrbexApi

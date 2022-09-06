@@ -27,6 +27,6 @@ struct ButtonLabel: View {
 
 struct ButtonLabel_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonLabel(symbolName: "camera", label: "Camera  -∞-°")
+        ButtonLabel(symbolName: "camera", label: "Camera°")
     }
 }

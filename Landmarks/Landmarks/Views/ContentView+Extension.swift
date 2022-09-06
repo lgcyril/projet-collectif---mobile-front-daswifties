@@ -116,7 +116,7 @@ extension ImagesAdd {
                 vm.source = .library
                 vm.showPhotoPicker ()
             } label: {
-                ButtonLabel(symbolName: "photo", label: "Ph@tos ∞")
+                ButtonLabel(symbolName: "photo", label: "Photos")
                 
             }
             
