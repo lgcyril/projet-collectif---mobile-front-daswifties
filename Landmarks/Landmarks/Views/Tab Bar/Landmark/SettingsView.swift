@@ -10,8 +10,15 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         List{
-            Section(header: Text("Loi et Règles")){
-            LawVIew()
+            Section(header: Text("La loi et les règles")){
+
+                NavigationLink(destination: LawView()) {
+                            Text("Loi")
+                          }
+
+                NavigationLink(destination: RulesView()) {
+                    Text("Règles")
+                }
             }
         }
     }

@@ -47,7 +47,7 @@ struct ImagesAdd: View {
                               text: $city)
                     TextField("Description : ",
                               text: $description)
-                }.navigationBarTitle(Text(" Add Urbex Spot"))
+                }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
                 
             }
             .task {
