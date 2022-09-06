@@ -1,7 +1,8 @@
 import SwiftUI
 
+// SwiftUI gives us the @ObservedObject property wrapper so that views can watch the state of an external object, and be notified when something important has changed. It is similar in behavior to @StateObject, except it must not be used to create objects – use @ObservableObject only with objects that have been created elsewhere, otherwise SwiftUI might accidentally destroy the object.
 class ViewModel: ObservableObject {
-    @Published var image: UIImage?
+    @Published var image: UIImage?   // whenever an object with a property marked @Published is changed, all views using that object will be reloaded to reflect those changes.
     @Published var showPicker = false
     @Published var source: Picker.Source = .library
     @Published var showCameraAlert = false
