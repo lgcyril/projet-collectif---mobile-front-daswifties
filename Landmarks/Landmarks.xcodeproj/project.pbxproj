@@ -36,6 +36,7 @@
 		A9B87DAC28BE1C42006E78C7 /* ImagesAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */; };
 		A9F711EB28BE3E3400A516BE /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711EA28BE3E3400A516BE /* Picker.swift */; };
 		A9F711F228BE613A00A516BE /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711F128BE613A00A516BE /* MyImage.swift */; };
+		B5A84F3028C742A50076E86B /* mapannotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A84F2F28C742A50076E86B /* mapannotations.swift */; };
 		B5FA4F2428C600A80066A464 /* DisplayMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA4F2328C600A80066A464 /* DisplayMap.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAdd.swift; sourceTree = "<group>"; };
 		A9F711EA28BE3E3400A516BE /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		A9F711F128BE613A00A516BE /* MyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
+		B5A84F2F28C742A50076E86B /* mapannotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapannotations.swift; sourceTree = "<group>"; };
 		B5FA4F2328C600A80066A464 /* DisplayMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				A97357BF28BCEE6800ACDA48 /* ContentView.swift */,
 				B5FA4F2328C600A80066A464 /* DisplayMap.swift */,
 				A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */,
+				B5A84F2F28C742A50076E86B /* mapannotations.swift */,
 				A69879FA28C0BA8400751852 /* SettingsView.swift */,
 				A6CA60D728C1ED73009850FC /* LawVIew.swift */,
 				A69879F928C0BA4100751852 /* Landmark */,
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A84F3028C742A50076E86B /* mapannotations.swift in Sources */,
 				A943F93628BFA9AD00B04331 /* ButtonLabel.swift in Sources */,
 				A9B87DA828BE178D006E78C7 /* ViewModel.swift in Sources */,
 				A9F711F228BE613A00A516BE /* MyImage.swift in Sources */,
