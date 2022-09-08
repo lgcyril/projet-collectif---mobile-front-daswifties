@@ -18,7 +18,7 @@ struct realmap: View {
                                 .frame(width: 100, height: 25)
                                 .clipShape(Circle())
                                 .overlay(
-                                    Circle().stroke(Color.white, lineWidth: 25/10))
+                                    Circle().stroke(Color.red, lineWidth: 25/10))
                                 .shadow(radius: 10)
                         }
         }

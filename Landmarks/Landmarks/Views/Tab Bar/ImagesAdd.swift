@@ -16,9 +16,11 @@ struct ImagesAdd: View {
     @State private var photo = ""
     @EnvironmentObject var vm: ViewModel
     @FocusState var nameField: Bool
+    @State private var confirm = false
+    
     
     var body: some View {
-        ScrollView {
+        NavigationView {
             VStack {
                 
                 if !vm.isEditing {
@@ -58,6 +60,7 @@ struct ImagesAdd: View {
                         ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
                     }.frame(alignment: .center )
                     .padding(5)
+                    .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
                     }
         
 

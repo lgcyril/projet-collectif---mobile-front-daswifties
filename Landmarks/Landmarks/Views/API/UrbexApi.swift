@@ -22,6 +22,7 @@ struct UrbexApi: View {
                 //           Text(modelAPI.records[0].fields?.name ?? "default")
                 ForEach(modelAPI.records, id: \.self) { record in
                     Text (record.fields?.name ?? "de")
+                    
                 }
                 .navigationTitle("UrbeX Spots (by API)")
             }  // list
