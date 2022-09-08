@@ -3,6 +3,24 @@
 //
 //
 //struct DisplayMap: View {
+
+//    
+//    @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.85, longitude: 2.35), span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+//    
+//    @State private var pointsOfInterest: [Record] = []
+//
+//    
+//    init(records: [Record]) {
+//        records.forEach { record in
+//            
+//            pointsOfInterest.append(record)
+//        }
+//    }
+//  
+//    var body: some View {
+//        Map(coordinateRegion: $region, annotationItems: pointsOfInterest) { item in
+//            
+
 //
 //    @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.85, longitude: 2.35), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
 //
@@ -20,6 +38,7 @@
 //        Map(coordinateRegion: $region, annotationItems: pointsOfInterest) { item in
 //
 //
+
 //            MapAnnotation(coordinate: item.coordinate) {
 //                Image(item.name)
 //                    .resizable()

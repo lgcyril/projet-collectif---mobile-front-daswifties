@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @State var showAlert = false
     @State var conditionAccepted = false
+    @State var moreinfo = false
     
     var body: some View {
         
@@ -29,11 +30,17 @@ struct ContentView: View {
                         Text("API")
                     }
                 
+                //                DisplayMap()
+                //                    .tabItem{
+                //                        Image(systemName: "map")
+                //                        Text("Carte")
+                //                    }
                 realmap()
                     .tabItem{
                         Image(systemName: "map")
                         Text("Map")
                     }
+
                 
                 ImagesAdd()
                     .environmentObject(ViewModel())
@@ -49,7 +56,19 @@ struct ContentView: View {
                     }
             }
             
-        } else {
+        } else if
+            
+           moreinfo {
+                    LawView()
+            Button {
+                self.moreinfo = false
+               
+            } label: {
+                Text("Rerour")
+            }
+                        
+        
+    } else {
             
             VStack{
                 Text("La pratique Urbex est dangereuse, interdite et punie par la loi !")
@@ -65,10 +84,10 @@ struct ContentView: View {
                     }
                     
                     Button {
-                        self.conditionAccepted = true
+                        self.moreinfo = true
                     } label: {
                         Text("En savoir plus !")
-                            .padding()
+                      .padding()
                         
                     }
                     
@@ -86,7 +105,6 @@ struct ContentView: View {
                 }
             }
             
-            //ImagesAdd()
             
         }
     }
