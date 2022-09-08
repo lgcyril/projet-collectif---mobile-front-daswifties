@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
     var body: some View {
-        List{
-            Section(header: Text("Loi et Règles")){
-            LawVIew()
+        
+        NavigationView {
+            List {
+                
+                Section {
+                    
+                    // Loi
+                    NavigationLink(destination: LawView()) {
+                        Text("Loi")
+                            
+                    }
+                    
+                    // Regles
+                    NavigationLink(destination: RulesView()) {
+                        Text("Règles")
+                    }
+                }
             }
         }
     }
@@ -22,3 +37,6 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView()
     }
 }
+
+
+

@@ -47,6 +47,7 @@ struct ImagesAdd: View {
                               text: $city)
                     TextField("Description : ",
                               text: $description)
+
                     
                     Spacer ()
                     VStack {
@@ -58,7 +59,10 @@ struct ImagesAdd: View {
                     }.frame(alignment: .center )
                     .padding(5)
                     }
-                }.navigationBarTitle(Text(" Add Urbex Spot"))
+        
+
+                }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
+
                 
             }
             
