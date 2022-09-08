@@ -14,14 +14,14 @@ struct RecordList: Decodable {
     let records : [Record]
 }
 
-struct Record: Decodable, Identifiable {
+struct Record: Decodable, Identifiable, Hashable, Equatable {
    
     // Identifiable means that each item has a unique ID. Decodable means that it can be decoded - for example, we can transform a JSON object into this data model.
-    let id: Int
+    let id: String
     let fields: RecordField?
 }
 
-struct RecordField: Decodable {
+struct RecordField: Decodable,Hashable {
     let name: String?
     let city: String?
     let description: String?
@@ -68,7 +68,6 @@ struct ImageModel: Hashable, Decodable {
                         self.records = tasks.records
                         
                         tasks.records.forEach{ i in
-                          Text(i.fields?.name ?? "default")
                             print("Name ",i.fields?.name ?? "default")
                             print("City ",i.fields?.city ?? "default")
                             print("Description ",i.fields?.description ?? "default")

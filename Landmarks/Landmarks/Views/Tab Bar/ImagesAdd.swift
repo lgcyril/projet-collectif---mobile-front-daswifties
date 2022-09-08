@@ -18,7 +18,7 @@ struct ImagesAdd: View {
     @FocusState var nameField: Bool
     
     var body: some View {
-        NavigationView {
+        ScrollView {
             VStack {
                 
                 if !vm.isEditing {
