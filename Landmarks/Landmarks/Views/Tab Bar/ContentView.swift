@@ -29,11 +29,11 @@ struct ContentView: View {
                         Text("API")
                     }
                 
-                DisplayMap()
-                    .tabItem{
-                        Image(systemName: "map")
-                        Text("Carte")
-                    }
+//                DisplayMap()
+//                    .tabItem{
+//                        Image(systemName: "map")
+//                        Text("Carte")
+//                    }
                 
                 ImagesAdd()
                     .environmentObject(ViewModel())
