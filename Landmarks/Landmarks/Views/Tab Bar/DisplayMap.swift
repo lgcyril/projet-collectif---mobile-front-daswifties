@@ -4,7 +4,7 @@
 //
 //struct DisplayMap: View {
 //
-//    @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.85, longitude: 2.35), span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+//    @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.85, longitude: 2.35), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10))
 //
 //    @State private var pointsOfInterest: [Record] = []
 //
