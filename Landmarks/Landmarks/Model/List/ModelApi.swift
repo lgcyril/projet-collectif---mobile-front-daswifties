@@ -10,7 +10,7 @@ import SwiftUI
 
 
 // Modele de l'API : https://api.airtable.com/v0/appOd9LKetjbpK9ry/Sheet1?api_key=key6CI84ofIkYQ4Ha
-struct RecordList: Decodable {
+struct RecordList: Decodable, Hashable {
     let records : [Record]
 }
 
@@ -21,7 +21,7 @@ struct Record: Decodable, Identifiable, Hashable, Equatable {
     let fields: RecordField?
 }
 
-struct RecordField: Decodable,Hashable {
+struct RecordField: Decodable , Hashable{
     let name: String?
     let city: String?
     let description: String?

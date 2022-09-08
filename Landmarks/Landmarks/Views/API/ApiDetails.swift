@@ -13,7 +13,7 @@ struct ApiDetails: View {
     @ObservedObject var ApiCall: ModelApi = ModelApi()
     
 //    init() {
-////        self.ApiCall
+//        self.ApiCall.decodeAPI()
 //    }
     
     var body: some View {
