@@ -47,14 +47,33 @@ struct ImagesAdd: View {
                               text: $city)
                     TextField("Description : ",
                               text: $description)
+
+                    
+                    Spacer ()
+                    VStack {
+                    Button{
+                    //vm.source = .camera
+                    
+                    } label: {
+                        ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
+                    }.frame(alignment: .center )
+                    .padding(5)
+                    }
+        
+
                 }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
+
                 
             }
+            
+           
+               
+            
             .task {
                 if FileManager().docExist(named: fileName) {
                     vm.loadMyImagesJSONFile()
                 }
-                
+                    
             }
             .sheet(isPresented: $vm.showPicker) {
                 ImagePicker(sourceType: vm.source == .library ? .photoLibrary : .camera, selectedImage: $vm.image)
