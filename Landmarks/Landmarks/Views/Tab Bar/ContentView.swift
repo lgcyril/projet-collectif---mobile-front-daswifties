@@ -2,11 +2,10 @@
 //  ContentView.swift
 //  Landmarks
 //
-//  Created by Hôtes on 29/08/2022.
+//  Created by Cyril with help of https://developer.apple.com/tutorials/swiftui/ on 29/08/2022.
 //
 
 import SwiftUI
-//import MapKit
 
 struct ContentView: View {
     
@@ -30,17 +29,11 @@ struct ContentView: View {
                         Text("API")
                     }
                 
-                //                DisplayMap()
-                //                    .tabItem{
-                //                        Image(systemName: "map")
-                //                        Text("Carte")
-                //                    }
                 realmap()
                     .tabItem{
                         Image(systemName: "map")
                         Text("Map")
                     }
-
                 
                 ImagesAdd()
                     .environmentObject(ViewModel())
@@ -54,68 +47,62 @@ struct ContentView: View {
                         Image(systemName: "gear")
                         Text("Réglages")
                     }
-            }
+            }  // TABVIEW
             
-        } else if
-            
-           moreinfo {
-                    LawView()
-            Button {
-                self.moreinfo = false
-               
-            } label: {
-                Text("Rerour")
-            }
-                        
+        } // IF
         
-    } else {
+        else if
+            
+            moreinfo {
+                LawView()
+                Button {
+                    self.moreinfo = false
+                    
+                } label: {
+                    Text("Retour")
+                }
+            } // MOREINFO
+        
+        else {
             
             VStack{
-                Text("La pratique Urbex est dangereuse, interdite et punie par la loi !")
+                Text("La pratique Urbex est dangereuse,\ninterdite et punie par la loi !")
                 
                 HStack{
                     
                     Button {
-                        self.conditionAccepted = true
-                    } label: {
-                        Text("OK")
-                            .padding()
-                        
-                    }
+                            self.conditionAccepted = true
+                        } label: {
+                            Text("OK")
+                                .padding()
+                        }
                     
                     Button {
-                        self.moreinfo = true
-                    } label: {
-                        Text("En savoir plus !")
-                      .padding()
-                        
-                    }
+                            self.moreinfo = true
+                        } label: {
+                            Text("En savoir plus !")
+                                .padding()
+                        }
                     
                     Button {
-                        self.showAlert = true
-                    } label: {
-                        Text("Refuser")
-                            .alert("Nous ne pouvons pas vous donner accès à notre application", isPresented: $showAlert) {
-                                Button("OK", role: .cancel) { }
-                            }
-                        
-                        
-                    }
+                            self.showAlert = true
+                        } label: {
+                            Text("Refuser")
+                                .alert("Si vous refusez, nous ne pouvons pas vous donner accès à notre application...", isPresented: $showAlert) {
+                                    Button("OK", role: .cancel) { }
+                                }
+                        } // label
                     
-                }
-            }
-            
-            
-        }
-    }
+                }  // HSTACK
+            }  // VSTACK
+        }  // ELSE
+    }  // CONTENTVIEW
     
     
     
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
             ContentView()
-            //MapView(coordinate: CLLocationCoordinate2D(latitude: 45.507818, longitude: 10.633923))
-        }
     }
-    
+ }
 }

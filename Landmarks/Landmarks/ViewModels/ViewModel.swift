@@ -1,3 +1,7 @@
+//
+//  Created by Cyril with help of https://www.youtube.com/watch?v=yMC16EZHwZU&t=0s on 30/08/2022.
+//
+
 import SwiftUI
 
 // SwiftUI gives us the @ObservedObject property wrapper so that views can watch the state of an external object, and be notified when something important has changed. It is similar in behavior to @StateObject, except it must not be used to create objects – use @ObservableObject only with objects that have been created elsewhere, otherwise SwiftUI might accidentally destroy the object.
@@ -16,18 +20,16 @@ class ViewModel: ObservableObject {
     
     init() {
         print(FileManager.docDirURL.path)
-        
     }
     
     var buttonDisabled: Bool {
         imageName.isEmpty || image == nil
         
     }
+    
     var deleteButtonIsHidden: Bool {
         isEditing || selectedImage == nil
-        
     }
-    
     
     func showPhotoPicker() {
         do {
@@ -48,15 +50,12 @@ class ViewModel: ObservableObject {
         imageName = ""
         isEditing = false
         selectedImage = nil
-        
     }
     
     func display(_ myImage: MyImage) {
         image = myImage.image
         imageName = myImage.name
         selectedImage = myImage
-        
-        
     }
     
     func updateSelected() {
@@ -65,7 +64,6 @@ class ViewModel: ObservableObject {
             saveMyImagesJSONFile()
             reset()
         }
-        
     }
     
     func deleteSelected() {
@@ -74,7 +72,6 @@ class ViewModel: ObservableObject {
             saveMyImagesJSONFile()
             reset()
         }
-        
     }
     
     func addMyImage(_ name: String, image: UIImage) {
@@ -88,12 +85,7 @@ class ViewModel: ObservableObject {
             showFileAlert = true
             appError = MyImageError.ErrorType(error: error as! MyImageError)
         }
-        
-        
-        
     }
-    
-    
     
     func saveMyImagesJSONFile() {
         let encoder = JSONEncoder()
@@ -103,12 +95,10 @@ class ViewModel: ObservableObject {
             reset()
             do {
                 try FileManager().saveDocument(contents: jsonString)
-                
             }
             catch {
                 showFileAlert = true
                 appError = MyImageError.ErrorType(error: error as! MyImageError)
-                
             }
         } catch {
             showFileAlert = true
@@ -126,15 +116,11 @@ class ViewModel: ObservableObject {
             } catch {
                 showFileAlert = true
                 appError = MyImageError.ErrorType(error: .decodingError)
-                
             }
             
         } catch {
             showFileAlert = true
             appError = MyImageError.ErrorType(error: error as! MyImageError)
-            
         }
-        
     }
-    
 } // fin

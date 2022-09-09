@@ -2,11 +2,10 @@
 //  MapView.swift
 //  Landmarks
 //
-//  Created by Hôtes on 29/08/2022.
+//  Created by Cyril with help of https://developer.apple.com/tutorials/swiftui/ on 29/08/2022.
 //
 
 import SwiftUI
-
 import MapKit
 
 struct MapView: View {

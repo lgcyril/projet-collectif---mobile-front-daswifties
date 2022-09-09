@@ -30,7 +30,7 @@ struct UrbexApi: View {
                                          }
                     
                 }
-                .navigationTitle("UrbeX Spots (by API)")
+                .navigationTitle("Urbex Spots (by API)")
             }  // list
         }  // navigtionview
         

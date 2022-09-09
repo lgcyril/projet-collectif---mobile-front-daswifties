@@ -2,7 +2,7 @@
 //  ImagesAdd.swift
 //  Landmarks
 //
-//  Created by Hôtes on 30/08/2022.
+//  Created by Cyril with help of https://www.youtube.com/watch?v=yMC16EZHwZU&t=0s on 30/08/2022.
 //
 
 import SwiftUI
@@ -18,15 +18,15 @@ struct ImagesAdd: View {
     @FocusState var nameField: Bool
     @State private var confirm = false
     
-    
+    // ADD PICTS FROM GALLERY OR CAMERA
     var body: some View {
+        
         NavigationView {
             VStack {
-                
                 if !vm.isEditing {
                     imageScroll
                 }
-               selectedImage
+                selectedImage
                 
                 VStack {
                     if vm.image != nil {
@@ -35,11 +35,11 @@ struct ImagesAdd: View {
                     if !vm.isEditing {
                         pickerButtons
                     }
-                    
                 }
                 .padding()
                 Spacer ()
                 
+                // ADD DESCRIPTION OF URBEX SPOTS : => TO FINISH
                 Form {
                     TextField("Name : ",
                               text: $name)
@@ -49,69 +49,51 @@ struct ImagesAdd: View {
                               text: $city)
                     TextField("Description : ",
                               text: $description)
-
                     
                     Spacer ()
-                    VStack {
-                    Button{
-                    //vm.source = .camera
                     
+                    Button{
                     } label: {
                         ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
                     }.frame(alignment: .center )
-                    .padding(5)
-                    .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
-                    }
-        
-
-                }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
-
-                
-            }
+                        .padding()
+                        .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
+                }  // FORM
+            // VSTACK :
+            }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
             
-           
-               
-            
-            .task {
-                if FileManager().docExist(named: fileName) {
-                    vm.loadMyImagesJSONFile()
-                }
-                    
-            }
-            .sheet(isPresented: $vm.showPicker) {
-                ImagePicker(sourceType: vm.source == .library ? .photoLibrary : .camera, selectedImage: $vm.image)
-                    .ignoresSafeArea()
-            }
-            .alert("Error", isPresented: $vm.showFileAlert, presenting: vm.appError, actions: {
-                cameraError in
-                cameraError.button
-                
-            }, message: { cameraError in
-                Text (cameraError.message)
-            })
-            .navigationTitle("My Images")
-            .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                    HStack {
-                        Spacer ()
-                        Button {
-                            nameField = false
-                            
-                        } label : {
-                            Image(systemName: "keyboard.chvron.compact.down")
-                            
-                            
-                        }
-                        
-                        
+            // NAVIGATIONVIEW
+                .task {
+                    if FileManager().docExist(named: fileName) {
+                        vm.loadMyImagesJSONFile()
                     }
-                    
                 }
-                
-            }
-        }
-    }
-}
+                .sheet(isPresented: $vm.showPicker) {
+                    ImagePicker(sourceType: vm.source == .library ? .photoLibrary : .camera, selectedImage: $vm.image)
+                        .ignoresSafeArea()
+                }
+                .alert("Error", isPresented: $vm.showFileAlert, presenting: vm.appError, actions: {
+                    cameraError in
+                    cameraError.button
+                }, message: { cameraError in
+                    Text (cameraError.message)
+                })
+                .navigationTitle("My Images")
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        HStack {
+                            Spacer ()
+                            Button {
+                                nameField = false
+                            } label : {
+                                Image(systemName: "keyboard.chvron.compact.down")
+                            }
+                        } // HSTACK
+                    } // TOOLBARITEM
+                } // TOOLBAR
+        }  // NAVIGATIONVIEW
+    }  // BODY
+}  // IMAGESADD
 
 struct ImagesAdd_Previews: PreviewProvider {
     static var previews: some View {

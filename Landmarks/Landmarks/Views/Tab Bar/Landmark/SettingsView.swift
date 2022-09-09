@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// DISPLAY LAW AND RULES
 struct SettingsView: View {
     
     var body: some View {
@@ -19,7 +20,6 @@ struct SettingsView: View {
                     // Loi
                     NavigationLink(destination: LawView()) {
                         Text("Loi")
-                            
                     }
                     
                     // Regles

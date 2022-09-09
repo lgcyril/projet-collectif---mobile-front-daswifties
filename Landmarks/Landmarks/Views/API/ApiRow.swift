@@ -2,7 +2,7 @@
 //  ApiRow.swift
 //  Landmarks
 //
-//  Created by Hôtes on 07/09/2022.
+//  Created by Cyril with help of https://developer.apple.com/tutorials/swiftui/ on 07/09/2022.
 //
 
 import SwiftUI

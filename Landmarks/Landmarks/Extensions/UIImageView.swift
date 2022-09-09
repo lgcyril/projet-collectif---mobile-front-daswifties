@@ -2,12 +2,13 @@
 //  UIImageView.swift
 //  Landmarks
 //
-//  Created by Hôtes on 08/09/2022.
+//  Created by Cyril with help of https://www.youtube.com/watch?v=yMC16EZHwZU&t=0s on 08/09/2022.
 //
 
 import Foundation
 import SwiftUI
 
+// TESTING DISPLAY IMAGES : => TO FINISH
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
         contentMode = mode

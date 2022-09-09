@@ -2,7 +2,7 @@
 //  My_ImagesApp.swift
 //  Landmarks
 //
-//  Created by Hôtes on 30/08/2022.
+//  Created by Cyril with help of https://www.youtube.com/watch?v=yMC16EZHwZU&t=0s on 30/08/2022.
 //
 
 import SwiftUI
