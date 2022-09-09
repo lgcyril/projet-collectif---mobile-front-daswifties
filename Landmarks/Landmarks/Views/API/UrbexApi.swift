@@ -29,11 +29,11 @@ struct UrbexApi: View {
                 
                 NavigationLink {
                     Text (records.fields?.name ?? "default")
-                    // ApiDetails(ApiCall: apicall)
+                    ApiDetails(modelAPI: self.modelAPI)
                     
                 } label: {
                     Text (records.fields?.name ?? "default")
-//                    ApiRow(modelAPI: self.modelAPI  )
+//                    ApiRow(modelAPI: self.modelAPI)
                 }
                 
                 //                }  // foreach
@@ -45,11 +45,8 @@ struct UrbexApi: View {
     }  // fin body
 }  // fin UrbexApi
 
-
 struct UrbexApi_Previews: PreviewProvider {
     static var previews: some View {
         UrbexApi()
     }
 }
-
-
