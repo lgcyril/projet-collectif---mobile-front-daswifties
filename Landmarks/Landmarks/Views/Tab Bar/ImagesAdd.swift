@@ -58,6 +58,7 @@ struct ImagesAdd: View {
                     }.frame(alignment: .center )
                         .padding()
                         .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
+                
                 }  // FORM
             // VSTACK :
             }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
