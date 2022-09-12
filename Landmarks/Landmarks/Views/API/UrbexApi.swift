@@ -20,7 +20,7 @@ struct UrbexApi: View {
         NavigationView {
             List (modelAPI.records) {records in
                 
-                //type(of: records)
+                //print(type(of: records))
                 
 // https://stackoverflow.com/questions/56535326/what-is-the-difference-between-list-and-foreach-in-swiftui#:~:text=Simple%20explanation%3A,view%2C%20and%20it's%20also%20scrollable)
 // List behaves like a UIScrollView (an arbitrarily long scrollable view of views)
@@ -29,11 +29,11 @@ struct UrbexApi: View {
                 
                 NavigationLink {
                     Text (records.fields?.name ?? "default")
-                    ApiDetails(modelAPI: self.modelAPI)
+                    ApiDetails(modelAPI: self.modelAPI)  // faire map et details
                     
                 } label: {
                     Text (records.fields?.name ?? "default")
-//                    ApiRow(modelAPI: self.modelAPI)
+//                    ApiRow(modelAPI: self.modelAPI)  // faire image et name
                 }
                 
                 //                }  // foreach

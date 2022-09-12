@@ -13,6 +13,7 @@ struct ApiDetails: View {
 //   var landmark: Landmark
     @ObservedObject var modelAPI: ModelApi = ModelApi()
     
+// Si j'enleve la map ne marche plus
 //    init() {
 //        self.modelAPI.decodeAPI()
 //    }
@@ -26,10 +27,11 @@ struct ApiDetails: View {
 //                        longitude: coordinates.longitude)
 //                }
             
+// Seul realmap marche, MapView ne reconnait pas fields à moins de specifier [0]...
             realmap()
 //            MapView(coordinate: CLLocationCoordinate2D(
-//                latitude: Double(modelAPI.records.$fields?.latitude ?? "default") ?? 5.55,
-//                longitude: Double(modelAPI.records.fields?.longitude ?? "default") ?? 4.44
+//                latitude: Double(modelAPI.records[0].$fields?.latitude ?? "default") ?? 5.55,
+//                longitude: Double(modelAPI.records[0].fields?.longitude ?? "default") ?? 4.44
 //            ))
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
