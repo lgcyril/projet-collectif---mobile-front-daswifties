@@ -11,7 +11,7 @@ import MapKit
 
 // Modele de l'API : https://api.airtable.com/v0/appOd9LKetjbpK9ry/Sheet1?api_key=key6CI84ofIkYQ4Ha
 struct RecordList: Decodable, Hashable {
-    let records : [Record]
+    let records: [Record]
 }
 
 struct Record: Decodable, Identifiable, Hashable, Equatable {
@@ -20,18 +20,18 @@ struct Record: Decodable, Identifiable, Hashable, Equatable {
     let fields: RecordField?
 }
 
-struct RecordField: Decodable , Hashable{
+struct RecordField: Decodable, Hashable{
     let name: String?
     let city: String?
     let description: String?
     let longitude: String?
     let latitude: String?
-    let images :  [ImageModel]
+    let images:  [ImageModel]
 }
 
 struct ImageModel: Hashable, Decodable {
-    let filename : String
-    let url : String
+    let filename: String
+    let url: String
 }
 
 // Affiche API
@@ -40,7 +40,9 @@ struct ImageModel: Hashable, Decodable {
     @Published var pointsOfInterest: [AnnotatedItem ] = []
     
     func decodeAPI(){
-        guard let url = URL(string: "https://api.airtable.com/v0/appOd9LKetjbpK9ry/Sheet1?api_key=key6CI84ofIkYQ4Ha") else{
+        let myURLString = "https://api.airtable.com/v0/appOd9LKetjbpK9ry/Sheet1?api_key=key6CI84ofIkYQ4Ha"
+        
+        guard let url = URL(string: myURLString) else{
             fatalError("Invalid url...")
         }
         let urlRequest = URLRequest(url: url)

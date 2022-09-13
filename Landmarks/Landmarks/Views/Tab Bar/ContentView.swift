@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var showAlert = false
     @State var conditionAccepted = false
     @State var moreinfo = false
+  
     
     var body: some View {
         
@@ -23,7 +24,7 @@ struct ContentView: View {
                         Text("Liste")
                     }
                 
-                UrbexApi()
+                UrbexGOApi()
                     .tabItem{
                         Image(systemName: "network")
                         Text("API")

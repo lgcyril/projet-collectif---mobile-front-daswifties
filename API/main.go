@@ -128,11 +128,21 @@ func getOneSpot(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func getSpotName(w http.ResponseWriter, r *http.Request) {
-	spotName := mux.Vars(r)["name"]
+func getSpotCity(w http.ResponseWriter, r *http.Request) {
+	spotCity := mux.Vars(r)["city"]
 
 	for _, singleSpot := range urbexSpots {
-		if singleSpot.Name == spotName {
+		if singleSpot.City == spotCity {
+			json.NewEncoder(w).Encode(singleSpot)
+		}
+	}
+}
+
+func getSpotName(w http.ResponseWriter, r *http.Request) {
+	spotName := mux.Vars(r)["imagename"]
+
+	for _, singleSpot := range urbexSpots {
+		if singleSpot.ImageName == spotName {
 			json.NewEncoder(w).Encode(singleSpot)
 		}
 	}
@@ -180,7 +190,8 @@ func main() {
 	router.HandleFunc("/urbex", createSpot).Methods("POST")
 	router.HandleFunc("/urbex", getAllUrbexSpots).Methods("GET")
 	router.HandleFunc("/urbex/{id}", getOneSpot).Methods("GET")
-	router.HandleFunc("/urbexName/{name}}", getSpotName).Methods("GET")
+	router.HandleFunc("/urbexName/{imagename}", getSpotName).Methods("GET")
+	router.HandleFunc("/urbexCity/{city}", getSpotCity).Methods("GET")
 	router.HandleFunc("/urbex/{id}", updateSpot).Methods("PATCH")
 	router.HandleFunc("/urbex/{id}", deleteSpot).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8080", router))

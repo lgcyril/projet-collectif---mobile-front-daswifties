@@ -37,6 +37,9 @@
 		A9B87DA828BE178D006E78C7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B87DA728BE178D006E78C7 /* ViewModel.swift */; };
 		A9B87DAA28BE1887006E78C7 /* My_ImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B87DA928BE1887006E78C7 /* My_ImagesApp.swift */; };
 		A9B87DAC28BE1C42006E78C7 /* ImagesAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */; };
+		A9CCED9D28D06E4C009B1C2E /* UrbexGOApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCED9C28D06E4C009B1C2E /* UrbexGOApi.swift */; };
+		A9CCED9F28D07E48009B1C2E /* ModelGOAPi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCED9E28D07E48009B1C2E /* ModelGOAPi.swift */; };
+		A9CCEDA128D08861009B1C2E /* ModelGOApi2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCEDA028D08861009B1C2E /* ModelGOApi2.swift */; };
 		A9F711EB28BE3E3400A516BE /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711EA28BE3E3400A516BE /* Picker.swift */; };
 		A9F711F228BE613A00A516BE /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F711F128BE613A00A516BE /* MyImage.swift */; };
 		B5A84F3028C742A50076E86B /* mapannotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A84F2F28C742A50076E86B /* mapannotations.swift */; };
@@ -76,6 +79,9 @@
 		A9B87DA728BE178D006E78C7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A9B87DA928BE1887006E78C7 /* My_ImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_ImagesApp.swift; sourceTree = "<group>"; };
 		A9B87DAB28BE1C42006E78C7 /* ImagesAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAdd.swift; sourceTree = "<group>"; };
+		A9CCED9C28D06E4C009B1C2E /* UrbexGOApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbexGOApi.swift; sourceTree = "<group>"; };
+		A9CCED9E28D07E48009B1C2E /* ModelGOAPi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGOAPi.swift; sourceTree = "<group>"; };
+		A9CCEDA028D08861009B1C2E /* ModelGOApi2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGOApi2.swift; sourceTree = "<group>"; };
 		A9F711EA28BE3E3400A516BE /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		A9F711F128BE613A00A516BE /* MyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
 		B5A84F2F28C742A50076E86B /* mapannotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapannotations.swift; sourceTree = "<group>"; };
@@ -153,6 +159,8 @@
 			children = (
 				A9B855A928BD084300BE729E /* ModelData.swift */,
 				A9645C1D28C77D4800FB8B6B /* ModelApi.swift */,
+				A9CCED9E28D07E48009B1C2E /* ModelGOAPi.swift */,
+				A9CCEDA028D08861009B1C2E /* ModelGOApi2.swift */,
 				A9B855A728BD072300BE729E /* Landmark.swift */,
 			);
 			path = List;
@@ -171,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				A636AC4128C2478900D7BC56 /* UrbexApi.swift */,
+				A9CCED9C28D06E4C009B1C2E /* UrbexGOApi.swift */,
 				A9645C1F28C7867B00FB8B6B /* ApiDetails.swift */,
 				A9755F1228C8C68E00048CCE /* ApiRow.swift */,
 			);
@@ -339,9 +348,12 @@
 				A943F93E28C09EFD00B04331 /* ZoomableScrollView.swift in Sources */,
 				A9B87DAC28BE1C42006E78C7 /* ImagesAdd.swift in Sources */,
 				A97357C028BCEE6800ACDA48 /* ContentView.swift in Sources */,
+				A9CCED9F28D07E48009B1C2E /* ModelGOAPi.swift in Sources */,
 				A9B855A428BD035E00BE729E /* MapView.swift in Sources */,
 				A97357BE28BCEE6800ACDA48 /* LandmarksApp.swift in Sources */,
 				A9B855B128BD0ACE00BE729E /* LandmarkList.swift in Sources */,
+				A9CCEDA128D08861009B1C2E /* ModelGOApi2.swift in Sources */,
+				A9CCED9D28D06E4C009B1C2E /* UrbexGOApi.swift in Sources */,
 				A943F94028C0A1A400B04331 /* MyImageError.swift in Sources */,
 				A9B855B328BD0C8900BE729E /* LandmarkDetail.swift in Sources */,
 				A6DB93FE28C78D220027E12C /* LawView.swift in Sources */,
