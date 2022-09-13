@@ -29,15 +29,10 @@ struct UrbexGOApi: View {
         
      
         
-    //    NavigationView<<#Content: View#>> {
+       NavigationView {
          List (records) {records in
-          Text ("\(records.City)")
-         }
-        .onAppear() {
-            ModelGOApi2().loadData { (records) in
-                          self.records = records
-                      }
-        }
+         
+         
             // Variable contenant Code source
 //            do {
 //                let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
@@ -49,14 +44,21 @@ struct UrbexGOApi: View {
    
              
              
-//             NavigationLink {
-//                 Text (records.Name ?? "default")
-//
-//             } label: {
-//                 Text (records.Name ?? "default")
-//
-//             }
-//             .navigationTitle("Urbex Spots (by API)")
+             NavigationLink {
+                 Text ("\(records.Name)")
+
+             } label: {
+                 Text ("\(records.Name)")
+
+
+             }
+         }
+        .onAppear() {
+            ModelGOApi2().loadData { (records) in
+                          self.records = records
+                      }
+        }
+             .navigationTitle("Urbex Spots (by API)")
 //
              
              
@@ -70,7 +72,7 @@ struct UrbexGOApi: View {
 //                   }
                
  //        }  // list
-     //  }  // navigtionview
+      }  // navigtionview
         
     }  // fin body
 }  // fin UrbexGOApi
