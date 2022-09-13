@@ -7,8 +7,8 @@ import Foundation
 
 
 // Modele de l'API : http://localhost:8080/urbexName/croixrouge
-struct GORecordList2: Codable, Identifiable {
-    let id = UUID()
+struct GORecordList2: Codable {
+    let ID: String
     let Name: String
     let City: String
     let Description: String

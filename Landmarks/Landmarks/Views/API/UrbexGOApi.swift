@@ -8,70 +8,29 @@
 import Foundation
 import SwiftUI
 
-
 // Affiche API
 struct UrbexGOApi: View {
- //   @Environment(\.openURL) private var openURL
     @State var records = [GORecordList2]()
-//    @ObservedObject var modelGOAPI: ModelGOApi = ModelGOApi()
-//
-//    init() {
-//        self.modelGOAPI.decodeGOAPI()
-//    }
+    @ObservedObject var modelGOAPI: ModelGOApi2 = ModelGOApi2()
     
     var body: some View {
-        // Déclaration
-//               let myURLString = "http://localhost:8080/urbexName/croixrouge"
-//               guard let myURL = URL(string: myURLString) else {
-//                   Text("Error: \(myURLString) doesn't seem to be a valid URL")
-//                  return
-//               }
-        
-     
-        
+ 
        NavigationView {
-         List (records) {records in
-         
-         
-            // Variable contenant Code source
-//            do {
-//                let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
-//                print("HTML : \(myHTMLString)")
-//            } catch let error {
-//                print("Error: \(error)")
-//            }
-                    
-   
-             
-             
-             NavigationLink {
-                 Text ("\(records.Name)")
+           List (records, id: \.ID) {record in
 
-             } label: {
-                 Text ("\(records.Name)")
-
-
+               NavigationLink {
+                   GOApiDetails(record: record)
+               } label: {
+                 //Text ("\(record.Name)")
+                   GOApiRow(record: record) 
              }
          }
         .onAppear() {
             ModelGOApi2().loadData { (records) in
                           self.records = records
                       }
-        }
-             .navigationTitle("Urbex Spots (by API)")
-//
-             
-             
-             
-//                   Button {
-//                       if let url = URL(string: "http://localhost:8080/urbexName/croixrouge") {
-//                           openURL(url)
-//                       }
-//                   } label: {
-//                       Label("Get Help", systemImage: "person.fill.questionmark")
-//                   }
-               
- //        }  // list
+        }.navigationTitle("Urbex Spots (by API)")
+
       }  // navigtionview
         
     }  // fin body
@@ -82,4 +41,3 @@ struct UrbexGOApi_Previews: PreviewProvider {
         UrbexGOApi()
     }
 }
-
