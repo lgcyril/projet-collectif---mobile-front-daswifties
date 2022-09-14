@@ -18,16 +18,16 @@ struct ContentView: View {
         
         if conditionAccepted {
             TabView{
-                LandmarkList()
-                    .tabItem{
-                        Image(systemName: "list.star")
-                        Text("Liste")
-                    }
+//                LandmarkList()
+//                    .tabItem{
+//                        Image(systemName: "list.star")
+//                        Text("Liste")
+//                    }
                 
                 UrbexGOApi()
                     .tabItem{
-                        Image(systemName: "network")
-                        Text("API")
+                        Image(systemName: "list.star")
+                        Text("Liste")
                     }
                 
                 realmap()

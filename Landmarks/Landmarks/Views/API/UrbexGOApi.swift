@@ -28,7 +28,7 @@ struct UrbexGOApi: View {
             ModelGOApi2().loadData { (records) in
                           self.records = records  // REMPLI LE TABLEAU RECORDS
                       }
-        }.navigationTitle("Urbex Spots (by API)")
+        }.navigationTitle("Urbex Spots")
 
       }  // navigtionview
         

@@ -6,29 +6,14 @@ import SwiftUI
 import MapKit
 
 struct GOApiDetails: View {
-//   var landmark: Landmark
-     let record : GORecordList2
-//    @ObservedObject var modelGOAPI: ModelGOApi2 = ModelGOApi2()
+//  var landmark: Landmark
+  let record : GORecordList2
+
     
-// Si j'enleve la map ne marche plus
-//    init() {
-//        self.modelGOAPI.loadData()
-//       { (records) in
-//                     self.records = records
-//                }
-//    }
+
     
     var body: some View {
         ScrollView {
-//            MapView(coordinate: landmark.locationCoordinate)
-//            CLLocationCoordinate2D {
-//                    CLLocationCoordinate2D(
-//                        latitude: coordinates.latitude,
-//                        longitude: coordinates.longitude)
-//                }
-            
-// Seul realmap marche, MapView ne reconnait pas fields à moins de specifier [0]...
-            //realmap()
             MapView(coordinate: CLLocationCoordinate2D(
                 latitude: Double(record.Latitude),
                 longitude: Double(record.Longitude)
@@ -45,6 +30,11 @@ struct GOApiDetails: View {
 //                .offset(y: -130)
 //                .padding(.bottom, -130)
 //                .frame(width: 200, height: 200, alignment: .center)
+            
+            CircleImage(image: record.image)
+                .offset(y: -130)
+                .padding(.bottom, -130)
+                .frame(width: 200, height: 200, alignment: .center)
             
             VStack(alignment: .leading) {
                 Text(record.Name)

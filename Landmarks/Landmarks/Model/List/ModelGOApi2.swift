@@ -3,6 +3,7 @@
 //  Landmarks
 //
 import Foundation
+import SwiftUI
 
 // Modele de l'API : http://localhost:8080/urbexName/croixrouge
 struct GORecordList2: Codable {
@@ -10,9 +11,15 @@ struct GORecordList2: Codable {
     let Name: String
     let City: String
     let Description: String
-    let ImageName: String
+//    let ImageName: String
     let Longitude: Double
     let Latitude: Double
+    
+    private var ImageName: String
+    var image: Image {
+        Image(ImageName)
+    }
+    
 }
 
 
