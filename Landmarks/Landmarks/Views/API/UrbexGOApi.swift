@@ -11,7 +11,6 @@ import SwiftUI
 // Affiche API
 struct UrbexGOApi: View {
     @State var records = [GORecordList2]()
-    @ObservedObject var modelGOAPI: ModelGOApi2 = ModelGOApi2()
     
     var body: some View {
  
@@ -25,9 +24,9 @@ struct UrbexGOApi: View {
                    GOApiRow(record: record) 
              }
          }
-        .onAppear() {
+        .onAppear() {  // APPEL API GO AVEC METHODE ONAPPEAR
             ModelGOApi2().loadData { (records) in
-                          self.records = records
+                          self.records = records  // REMPLI LE TABLEAU RECORDS
                       }
         }.navigationTitle("Urbex Spots (by API)")
 

@@ -28,11 +28,11 @@ struct GOApiDetails: View {
 //                }
             
 // Seul realmap marche, MapView ne reconnait pas fields à moins de specifier [0]...
-            realmap()
-//            MapView(coordinate: CLLocationCoordinate2D(
-//                latitude: Double(modelAPI.records[0].$fields?.latitude ?? "default") ?? 5.55,
-//                longitude: Double(modelAPI.records[0].fields?.longitude ?? "default") ?? 4.44
-//            ))
+            //realmap()
+            MapView(coordinate: CLLocationCoordinate2D(
+                latitude: Double(record.Latitude),
+                longitude: Double(record.Longitude)
+            ))
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
@@ -70,9 +70,4 @@ struct GOApiDetails: View {
     } // fin body
 }  // fin apidetails
 
-//struct GOApiDetails_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GOApiDetails()
-//    }
-//}
 

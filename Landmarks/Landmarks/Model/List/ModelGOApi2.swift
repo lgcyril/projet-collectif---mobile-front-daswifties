@@ -4,8 +4,6 @@
 //
 import Foundation
 
-
-
 // Modele de l'API : http://localhost:8080/urbexName/croixrouge
 struct GORecordList2: Codable {
     let ID: String
@@ -13,6 +11,8 @@ struct GORecordList2: Codable {
     let City: String
     let Description: String
     let ImageName: String
+    let Longitude: Double
+    let Latitude: Double
 }
 
 

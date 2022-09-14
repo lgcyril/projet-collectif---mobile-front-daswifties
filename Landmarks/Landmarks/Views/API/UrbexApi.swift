@@ -9,6 +9,7 @@ import SwiftUI
 // Affiche API
 struct UrbexApi: View {
 
+    // APPEL API AVEC METHODE INIT
     @ObservedObject var modelAPI: ModelApi = ModelApi()
     
     init() {
