@@ -12,6 +12,7 @@
 		A69879FB28C0BA8400751852 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69879FA28C0BA8400751852 /* SettingsView.swift */; };
 		A6DB93FC28C77B800027E12C /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DB93FB28C77B800027E12C /* RulesView.swift */; };
 		A6DB93FE28C78D220027E12C /* LawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DB93FD28C78D220027E12C /* LawView.swift */; };
+		A93E0EF528D3338000A54072 /* AddSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93E0EF428D3338000A54072 /* AddSpot.swift */; };
 		A943F93628BFA9AD00B04331 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93528BFA9AD00B04331 /* ButtonLabel.swift */; };
 		A943F93928C09EC600B04331 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93828C09EC600B04331 /* FileManager+Extension.swift */; };
 		A943F93D28C09EFD00B04331 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943F93B28C09EFD00B04331 /* ImagePicker.swift */; };
@@ -54,6 +55,7 @@
 		A69879FA28C0BA8400751852 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Landmark/SettingsView.swift; sourceTree = "<group>"; };
 		A6DB93FB28C77B800027E12C /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		A6DB93FD28C78D220027E12C /* LawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawView.swift; sourceTree = "<group>"; };
+		A93E0EF428D3338000A54072 /* AddSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpot.swift; sourceTree = "<group>"; };
 		A943F93528BFA9AD00B04331 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		A943F93828C09EC600B04331 /* FileManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		A943F93B28C09EFD00B04331 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A943F93F28C0A1A400B04331 /* MyImageError.swift */,
+				A93E0EF428D3338000A54072 /* AddSpot.swift */,
 				A9F711EA28BE3E3400A516BE /* Picker.swift */,
 				A9F711F128BE613A00A516BE /* MyImage.swift */,
 			);
@@ -365,6 +368,7 @@
 				A9B87DAA28BE1887006E78C7 /* My_ImagesApp.swift in Sources */,
 				A9F711EB28BE3E3400A516BE /* Picker.swift in Sources */,
 				A9B855A828BD072300BE729E /* Landmark.swift in Sources */,
+				A93E0EF528D3338000A54072 /* AddSpot.swift in Sources */,
 				A9755F1328C8C68E00048CCE /* ApiRow.swift in Sources */,
 				A9B855AF28BD090D00BE729E /* LandmarkRow.swift in Sources */,
 				A9645C1E28C77D4800FB8B6B /* ModelApi.swift in Sources */,

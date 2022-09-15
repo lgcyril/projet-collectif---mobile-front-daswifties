@@ -27,6 +27,7 @@ struct UrbexGOApi: View {
         .onAppear() {  // APPEL API GO AVEC METHODE ONAPPEAR
             ModelGOApi2().loadData { (records) in
                           self.records = records  // REMPLI LE TABLEAU RECORDS
+                PostData()
                       }
         }.navigationTitle("Urbex Spots")
 

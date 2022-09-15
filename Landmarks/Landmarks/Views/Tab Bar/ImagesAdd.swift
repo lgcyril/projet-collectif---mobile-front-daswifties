@@ -41,26 +41,52 @@ struct ImagesAdd: View {
                 
                 // ADD DESCRIPTION OF URBEX SPOTS : => TO FINISH
                 Form {
-                    TextField("Name : ",
-                              text: $name)
-                    TextField("Category : ",
-                              text: $category)
-                    TextField("City : ",
-                              text: $city)
-                    TextField("Description : ",
-                              text: $description)
+                    HStack {
+                        Text("Name :").bold()
+                        Divider()
+                        TextField("name",
+                                  text: $name).onAppear() { print("Name : ",$name)}
+                    }
+                    HStack {
+                        Text("City    :").bold()
+                        Divider()
+                        TextField("city",
+                                  text: $city)
+                    }
+                    HStack {
+                        Text("Description").bold()
+                        Divider()
+                        TextField("description",
+                                  text: $description)
+                        
+                    }
                     
-                    Spacer ()
                     
-                    Button{
-                    } label: {
-                        ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
-                    }.frame(alignment: .center )
-                        .padding()
-                        .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
-                
+                    
+                    
+                    
+                 //   Section {
+                        VStack { //For Button
+                            Spacer()
+                            
+                            HStack {
+                               Spacer()
+                                
+                                Button{
+                                }
+                            label: {
+                                ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
+                            }
+                                 .padding()
+                            .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
+                                //                        .frame(alignment: .center )
+                                Spacer()
+                            }
+                        }
+                        
+                  //  } // section
                 }  // FORM
-            // VSTACK :
+                // VSTACK :
             }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
             
             // NAVIGATIONVIEW
