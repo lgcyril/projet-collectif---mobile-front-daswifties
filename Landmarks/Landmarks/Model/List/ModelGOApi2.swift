@@ -1,7 +1,8 @@
 //
 //  ModelGOApi2.swift
 //  Landmarks
-//
+//  Created by Cyril with help of https://medium.com/@nutanbhogendrasharma/consume-rest-api-in-swiftui-ios-mobile-app-b3c5d6ecf401on 06/09/2022.
+
 import Foundation
 import SwiftUI
 
@@ -11,7 +12,6 @@ struct GORecordList2: Codable {
     let Name: String
     let City: String
     let Description: String
-//    let ImageName: String
     let Longitude: Double
     let Latitude: Double
     
