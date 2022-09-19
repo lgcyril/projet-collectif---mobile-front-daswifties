@@ -21,7 +21,7 @@ struct UrbexApi: View {
         NavigationView {
             List (modelAPI.records) {records in
                 
-                //print(type(of: records))
+                //print(type(of: records))   // pour connaitre le type
                 
 // https://stackoverflow.com/questions/56535326/what-is-the-difference-between-list-and-foreach-in-swiftui#:~:text=Simple%20explanation%3A,view%2C%20and%20it's%20also%20scrollable)
 // List behaves like a UIScrollView (an arbitrarily long scrollable view of views)

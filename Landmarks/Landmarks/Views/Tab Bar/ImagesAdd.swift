@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ImagesAdd: View {
     @State private var name = ""
@@ -17,9 +18,11 @@ struct ImagesAdd: View {
     @EnvironmentObject var vm: ViewModel
     @FocusState var nameField: Bool
     @State private var confirm = false
+    @State var records = [GORecordList2]()
     
     // ADD PICTS FROM GALLERY OR CAMERA
     var body: some View {
+        
         
         NavigationView {
             VStack {
@@ -58,33 +61,37 @@ struct ImagesAdd: View {
                         Divider()
                         TextField("description",
                                   text: $description)
-                        
                     }
                     
                     
-                    
-                    
-                    
-                 //   Section {
-                        VStack { //For Button
+                    VStack { //For Button VALID
+                        Spacer()
+                        
+                        HStack {
+                            Spacer()
+                            Button{
+                                ModelGOApi2().loadData { (record) in
+                                    self.records = record  // REMPLI LE TABLEAU RECORDS
+//                                    print("\n\n\nID : ", $records.ID)
+                                }
+                            
+                                print("\n\n\nName : ", name)
+                                print("City : ", city)
+                                print("Description : ", description)
+                                print("Image : ", vm.imageName)
+                                print("\n\n\n")
+                                AddSpot(name, city, description)
+                            }
+                        label: {
+                            ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
+                        }
+                        .padding()
+//                        .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
+                        .frame(maxWidth: .infinity)
                             Spacer()
                             
-                            HStack {
-                               Spacer()
-                                
-                                Button{
-                                }
-                            label: {
-                                ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
-                            }
-                                 .padding()
-                            .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
-                                //                        .frame(alignment: .center )
-                                Spacer()
-                            }
                         }
-                        
-                  //  } // section
+                    }  // button
                 }  // FORM
                 // VSTACK :
             }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
@@ -122,10 +129,10 @@ struct ImagesAdd: View {
     }  // BODY
 }  // IMAGESADD
 
-struct ImagesAdd_Previews: PreviewProvider {
-    static var previews: some View {
-        ImagesAdd()
-            .environmentObject(ViewModel())
-    }
-}
+//struct ImagesAdd_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ImagesAdd()
+//            .environmentObject(ViewModel())
+//    }
+//}
 

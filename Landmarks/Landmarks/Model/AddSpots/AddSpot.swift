@@ -6,12 +6,19 @@
 
 import UIKit
 
-func PostData() {
+func AddSpot(_ name: String, _ city: String, _ description: String) {
+    let longitutde: Double = 102.14608983929037
+    let latitude:   Double = 19.871288047261494
+    
     do {
-        guard let url = URL(string: "https://reqres.in/api/users") else { return }
-        let body = [
-            "name": "Henry",
-            "job": "Engineer"
+        guard let url = URL(string: "http://localhost:8080/urbex") else { return }
+        let body : [String:Any]  = [
+            "Name": name,
+            "City": city,
+            "Description": description,
+            "Longitude": longitutde,
+            "Latitude": latitude,
+            "ImageName": "Laos"
         ]
         
         var request = URLRequest(url: url)
@@ -54,5 +61,9 @@ struct CreateUserResponse: Decodable {
 }
 
 
-
-
+//let button = UIButton(type: UIButtonType.Custom) as UIButton
+//  button.addTarget(self, action: "action:", forControlEvents: UIControlEvents.TouchUpInside)
+//
+//func action(sender:UIButton!) {
+//   print("Button Clicked")
+//}

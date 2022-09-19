@@ -34,7 +34,7 @@ class ModelGOApi2 : ObservableObject{
         }
         URLSession.shared.dataTask(with: url) { data, response, error in
             let records = try! JSONDecoder().decode([GORecordList2].self, from: data!)
-            print(records)
+//            print(records)
             DispatchQueue.main.async {
                 completion(records)
             }
