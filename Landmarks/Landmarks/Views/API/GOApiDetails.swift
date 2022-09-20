@@ -8,7 +8,7 @@ import MapKit
 struct GOApiDetails: View {
   let record : GORecordList2
     
-    // POUR UPLOAD PHOTO PAR LA GALLERIE
+    // POUR UPLOAD PHOTO PAR LA GALLERIE ON UTILISE VIEWMODEL
     @EnvironmentObject var vm: ViewModel
     
     
@@ -21,6 +21,7 @@ struct GOApiDetails: View {
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
+//            CircleImage(image: Image("Laos"))
             CircleImage(image: record.image)
 //            CircleImage(image: $vm.image)
                 .offset(y: -130)

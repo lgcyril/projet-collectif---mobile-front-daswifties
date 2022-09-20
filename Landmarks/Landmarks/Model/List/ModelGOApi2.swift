@@ -23,7 +23,7 @@ struct GORecordList2: Codable {
 }
 
 
-
+// LOAD GO API IN LOCALHOST : TO FIND A CLOUD LIKE HEROKU, VERCEL....
 class ModelGOApi2 : ObservableObject{
     @Published var records = [GORecordList2]()
     

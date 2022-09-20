@@ -73,7 +73,7 @@ var urbexSpots = allUrbexSpots{
 		City:        "Aincourt",
 		ID:          "1007",
 		Description: "Partez de Paris direction Rouen en suivant la Seine et à mi-chemin vous passerez devant cet immense bâtiment. Un lieu déjà foulé par de nombreux aventuriers du dimanche mais qui attire toujours autant de monde, et on comprend pourquoi quand vu le nombre de pièces à explorer !",
-		ImageName:   "sanatoriumaincourt",
+		ImageName:   "sanatoriuMaincourt",
 		Longitude:   1.771976,
 		Latitude:    49.0719037,
 	},
@@ -124,11 +124,11 @@ var urbexSpots = allUrbexSpots{
 	},
 }
 
-func homeLink(w http.ResponseWriter, r *http.Request) {
+func HomeLink(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome home!")
 }
 
-func createSpot(w http.ResponseWriter, r *http.Request) {
+func CreateSpot(w http.ResponseWriter, r *http.Request) {
 	var newSpot urbex
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
@@ -142,7 +142,7 @@ func createSpot(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(newSpot)
 }
 
-func getOneSpot(w http.ResponseWriter, r *http.Request) {
+func GetOneSpot(w http.ResponseWriter, r *http.Request) {
 	spotID := mux.Vars(r)["id"]
 
 	for _, singleSpot := range urbexSpots {
@@ -152,7 +152,7 @@ func getOneSpot(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func getSpotCity(w http.ResponseWriter, r *http.Request) {
+func GetSpotCity(w http.ResponseWriter, r *http.Request) {
 	spotCity := mux.Vars(r)["city"]
 
 	for _, singleSpot := range urbexSpots {
@@ -162,7 +162,7 @@ func getSpotCity(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func getSpotName(w http.ResponseWriter, r *http.Request) {
+func GetSpotName(w http.ResponseWriter, r *http.Request) {
 	spotName := mux.Vars(r)["imagename"]
 
 	for _, singleSpot := range urbexSpots {
@@ -172,11 +172,11 @@ func getSpotName(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func getAllUrbexSpots(w http.ResponseWriter, r *http.Request) {
+func GetAllUrbexSpots(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(urbexSpots)
 }
 
-func updateSpot(w http.ResponseWriter, r *http.Request) {
+func UpdateSpot(w http.ResponseWriter, r *http.Request) {
 	spotID := mux.Vars(r)["id"]
 	var updatedSpot urbex
 
@@ -196,7 +196,7 @@ func updateSpot(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func deleteSpot(w http.ResponseWriter, r *http.Request) {
+func DeleteSpot(w http.ResponseWriter, r *http.Request) {
 	spotID := mux.Vars(r)["id"]
 
 	for i, singleSpot := range urbexSpots {
@@ -207,16 +207,17 @@ func deleteSpot(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func main() {
+func Main() {
 
 	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/", homeLink)
-	router.HandleFunc("/urbex", createSpot).Methods("POST")
-	router.HandleFunc("/urbex", getAllUrbexSpots).Methods("GET")
-	router.HandleFunc("/urbex/{id}", getOneSpot).Methods("GET")
-	router.HandleFunc("/urbexName/{imagename}", getSpotName).Methods("GET")
-	router.HandleFunc("/urbexCity/{city}", getSpotCity).Methods("GET")
-	router.HandleFunc("/urbex/{id}", updateSpot).Methods("PATCH")
-	router.HandleFunc("/urbex/{id}", deleteSpot).Methods("DELETE")
+	router.HandleFunc("/", HomeLink)
+	router.HandleFunc("/urbex", CreateSpot).Methods("POST")
+	router.HandleFunc("/urbex", GetAllUrbexSpots).Methods("GET")
+	router.HandleFunc("/IMAGES", GetAllUrbexSpots).Methods("GET")
+	router.HandleFunc("/urbex/{id}", GetOneSpot).Methods("GET")
+	router.HandleFunc("/urbexName/{imagename}", GetSpotName).Methods("GET")
+	router.HandleFunc("/urbexCity/{city}", GetSpotCity).Methods("GET")
+	router.HandleFunc("/urbex/{id}", UpdateSpot).Methods("PATCH")
+	router.HandleFunc("/urbex/{id}", DeleteSpot).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }

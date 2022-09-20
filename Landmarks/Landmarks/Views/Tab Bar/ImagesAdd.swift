@@ -3,7 +3,7 @@
 //  Landmarks
 //
 //  Created by Cyril with help of https://www.youtube.com/watch?v=yMC16EZHwZU&t=0s on 30/08/2022.
-//
+// https://medium.com/swlh/how-to-open-the-camera-and-photo-library-in-swiftui-9693f9d4586b
 
 import SwiftUI
 import UIKit
@@ -42,13 +42,13 @@ struct ImagesAdd: View {
                 .padding()
                 Spacer ()
                 
-                // ADD DESCRIPTION OF URBEX SPOTS : => TO FINISH
+                // ADD DESCRIPTION OF URBEX SPOTS : => TO FINISH ADD IMAGE FROM GO OR GALLERY?
                 Form {
                     HStack {
                         Text("Name :").bold()
                         Divider()
                         TextField("name",
-                                  text: $name).onAppear() { print("Name : ",$name)}
+                                  text: $name)
                     }
                     HStack {
                         Text("City    :").bold()
@@ -72,9 +72,9 @@ struct ImagesAdd: View {
                             Button{
                                 ModelGOApi2().loadData { (record) in
                                     self.records = record  // REMPLI LE TABLEAU RECORDS
-//                                    print("\n\n\nID : ", $records.ID)
+                                    //                                    print("\n\n\nID : ", $records.ID)
                                 }
-                            
+                                
                                 print("\n\n\nName : ", name)
                                 print("City : ", city)
                                 print("Description : ", description)
@@ -86,15 +86,13 @@ struct ImagesAdd: View {
                             ButtonLabel(symbolName: "checkmark.circle", label: "Valid")
                         }
                         .padding()
-//                        .alert("Thank you!", isPresented: $confirm) {Button("OK"){}} message: {            Text("Validated")}
                         .frame(maxWidth: .infinity)
-                            Spacer()
-                            
+                        Spacer()
                         }
                     }  // button
                 }  // FORM
-                // VSTACK :
-            }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)
+                
+            }.navigationBarTitle(Text(" Add Urbex Spot"), displayMode: .inline)  // VSTACK
             
             // NAVIGATIONVIEW
                 .task {
