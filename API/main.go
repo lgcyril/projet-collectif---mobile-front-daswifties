@@ -73,7 +73,7 @@ var urbexSpots = allUrbexSpots{
 		City:        "Aincourt",
 		ID:          "1007",
 		Description: "Partez de Paris direction Rouen en suivant la Seine et à mi-chemin vous passerez devant cet immense bâtiment. Un lieu déjà foulé par de nombreux aventuriers du dimanche mais qui attire toujours autant de monde, et on comprend pourquoi quand vu le nombre de pièces à explorer !",
-		ImageName:   "sanatoriuMaincourt",
+		ImageName:   "sanatoriumaincourt",
 		Longitude:   1.771976,
 		Latitude:    49.0719037,
 	},
@@ -207,17 +207,17 @@ func DeleteSpot(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func Main() {
+func main() {
 
 	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/", HomeLink)
-	router.HandleFunc("/urbex", CreateSpot).Methods("POST")
-	router.HandleFunc("/urbex", GetAllUrbexSpots).Methods("GET")
-	router.HandleFunc("/IMAGES", GetAllUrbexSpots).Methods("GET")
-	router.HandleFunc("/urbex/{id}", GetOneSpot).Methods("GET")
-	router.HandleFunc("/urbexName/{imagename}", GetSpotName).Methods("GET")
-	router.HandleFunc("/urbexCity/{city}", GetSpotCity).Methods("GET")
-	router.HandleFunc("/urbex/{id}", UpdateSpot).Methods("PATCH")
-	router.HandleFunc("/urbex/{id}", DeleteSpot).Methods("DELETE")
+	router.HandleFunc("/api", HomeLink)
+	router.HandleFunc("/api/urbex", CreateSpot).Methods("POST")
+	router.HandleFunc("/api/urbex", GetAllUrbexSpots).Methods("GET")
+	router.HandleFunc("/api/IMAGES", GetAllUrbexSpots).Methods("GET")
+	router.HandleFunc("/api/urbex/{id}", GetOneSpot).Methods("GET")
+	router.HandleFunc("/api/urbexName/{imagename}", GetSpotName).Methods("GET")
+	router.HandleFunc("/api/urbexCity/{city}", GetSpotCity).Methods("GET")
+	router.HandleFunc("/api/urbex/{id}", UpdateSpot).Methods("PATCH")
+	router.HandleFunc("/api/urbex/{id}", DeleteSpot).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }

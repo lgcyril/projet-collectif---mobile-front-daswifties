@@ -9,16 +9,18 @@ import UIKit
 func AddSpot(_ name: String, _ city: String, _ description: String) {
     let longitutde: Double = 102.14608983929037
     let latitude:   Double = 19.871288047261494
+    //  let urlApi:String = "http://localhost:8080/api/urbex"  // il faut lancer go run . depuis le repertoir API
+       let urlApi:String = "https://testgovercel-urbexspots-urbex-spots.vercel.app/api/getall" // heberge sur Vercel Cyril
     
     do {
-        guard let url = URL(string: "http://localhost:8080/urbex") else { return }
+        guard let url = URL(string: urlApi) else { return }
         let body : [String:Any]  = [
             "Name": name,
             "City": city,
             "Description": description,
             "Longitude": longitutde,
             "Latitude": latitude,
-            "ImageName": "Laos"
+            "ImageName": "belakissscreen"
         ]
         
         var request = URLRequest(url: url)

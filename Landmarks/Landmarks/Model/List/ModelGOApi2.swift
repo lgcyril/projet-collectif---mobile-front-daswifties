@@ -6,7 +6,8 @@
 import Foundation
 import SwiftUI
 
-// Modele de l'API : http://localhost:8080/urbexName/croixrouge
+// Modele de l'API : http://localhost:8080/api/urbex
+//   https://testgovercel-urbexspots-urbex-spots.vercel.app/api/getall
 struct GORecordList2: Codable {
     let ID: String
     let Name: String
@@ -26,9 +27,11 @@ struct GORecordList2: Codable {
 // LOAD GO API IN LOCALHOST : TO FIND A CLOUD LIKE HEROKU, VERCEL....
 class ModelGOApi2 : ObservableObject{
     @Published var records = [GORecordList2]()
+ //   let urlApi:String = "http://localhost:8080/api/urbex"
+    let urlApi:String = "https://testgovercel-urbexspots-urbex-spots.vercel.app/api/getall"
     
     func loadData(completion:@escaping ([GORecordList2]) -> ()) {
-        guard let url = URL(string: "http://localhost:8080/urbex") else {
+        guard let url = URL(string: urlApi) else {
             print("Invalid url...")
             return
         }

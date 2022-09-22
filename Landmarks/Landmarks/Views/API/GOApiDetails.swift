@@ -23,7 +23,7 @@ struct GOApiDetails: View {
             
 //            CircleImage(image: Image("Laos"))
             CircleImage(image: record.image)
-//            CircleImage(image: $vm.image)
+       //     CircleImage(image: $vm.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
                 .frame(width: 200, height: 200, alignment: .center)
