@@ -10,7 +10,6 @@ import (
 func API(w http.ResponseWriter, r *http.Request) {
 
 	router := mux.NewRouter().StrictSlash(true)
-	//router.HandleFunc("/api", HomeLink)
 	//router.HandleFunc("/api", CreateSpot).Methods(http.MethodPost)
 	//router.HandleFunc("/api", GetAllUrbexSpots).Methods(http.MethodGet)
 	//router.HandleFunc("/api/{id}", GetOneSpot).Methods(http.MethodGet)
