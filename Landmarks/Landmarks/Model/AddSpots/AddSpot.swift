@@ -10,7 +10,7 @@ func AddSpot(_ name: String, _ city: String, _ description: String) {
     let longitutde: Double = 102.14608983929037
     let latitude:   Double = 19.871288047261494
     //  let urlApi:String = "http://localhost:8080/api/urbex"  // il faut lancer go run . depuis le repertoir API
-       let urlApi:String = "https://testgovercel-urbexspots-urbex-spots.vercel.app/api/createspot" // heberge sur Vercel Cyril
+       let urlApi:String = "https://projet-collectif-mobile-front-daswifties.vercel.app/api/createspot" // heberge sur Vercel Cyril
     
     do {
         guard let url = URL(string: urlApi) else { return }

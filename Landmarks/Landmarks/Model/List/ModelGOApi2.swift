@@ -7,7 +7,7 @@ import Foundation
 import SwiftUI
 
 // Modele de l'API : http://localhost:8080/api/urbex
-//   https://testgovercel-urbexspots-urbex-spots.vercel.app/api/getall
+//   https://projet-collectif-mobile-front-daswifties.vercel.app/api/getall
 struct GORecordList2: Codable {
     let ID: String
     let Name: String
@@ -28,7 +28,7 @@ struct GORecordList2: Codable {
 class ModelGOApi2 : ObservableObject{
     @Published var records = [GORecordList2]()
  //   let urlApi:String = "http://localhost:8080/api/urbex"
-    let urlApi:String = "https://testgovercel-urbexspots-urbex-spots.vercel.app/api/getall"
+    let urlApi:String = "https://projet-collectif-mobile-front-daswifties.vercel.app/api/getall"
     
     func loadData(completion:@escaping ([GORecordList2]) -> ()) {
         guard let url = URL(string: urlApi) else {
